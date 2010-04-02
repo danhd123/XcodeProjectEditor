@@ -8,7 +8,18 @@
 
 #import <Cocoa/Cocoa.h>
 
-
+enum token_types {
+	encoding, 
+	begin_array,
+	end_array,
+	begin_hash,
+	end_hash,
+	assign,
+	stop,
+	comma,
+	string,
+	symbol
+};
 @interface SYPBXProjLexer : NSObject {
 
 }
