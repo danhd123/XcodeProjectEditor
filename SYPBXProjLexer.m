@@ -32,7 +32,7 @@
 		NSLog(@"No encoding");
 		return nil;
 	}
-	NSMutableArray *tokens = [NSMutableArray arrayWithObject:[NSDictionary dictionaryWithObject:encodingMatch forKey:[NSNumber numberWithInt:encoding]]];
+	NSMutableArray *tokens = [NSMutableArray arrayWithObject:[NSArray arrayWithObjects:[NSNumber numberWithInt:encoding], encodingMatch, nil]];
 	while (i < [source length])
 	{
 		if ([[source substringWithRange:NSMakeRange(i, 2)] isEqualToString:@"/*"])
@@ -106,7 +106,7 @@
 					i+=1;
 				}
 			}
-			[tokens addObject:[NSDictionary dictionaryWithObject:tokenString forKey:[NSNumber numberWithInt:string]]];
+			[tokens addObject:[NSArray arrayWithObjects:[NSNumber numberWithInt:string], tokenString, nil]];
 			i+=1;
 		}
 		else
@@ -114,7 +114,7 @@
 			int len = 0;
 			while ([[source substringWithRange:NSMakeRange(i+len, 1)] isMatchedByRegex:@"[^\\s\\t\\r\\n\\f(){}=;,]"])
 				i+=1;
-			[tokens addObject:[NSDictionary dictionaryWithObject:[source substringWithRange:NSMakeRange(i, len)] forKey:[NSNumber numberWithInt:symbol]]];
+			[tokens addObject:[NSArray arrayWithObjects:[NSNumber numberWithInt:symbol], [source substringWithRange:NSMakeRange(i, len)], nil]];
 			i+= len;
 		}
 	}
