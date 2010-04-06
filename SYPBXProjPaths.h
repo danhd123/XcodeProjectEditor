@@ -12,6 +12,6 @@
 @interface SYPBXProjPaths : NSObject {
 
 }
--(NSString *)projectFileAt:(NSString *)basePath;
--(NSString *)projectRootAt:(NSString *)basePath;
++(NSString *)projectFileAt:(NSString *)basePath;
++(NSString *)projectRootAt:(NSString *)basePath;
 @end

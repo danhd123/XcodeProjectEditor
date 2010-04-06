@@ -10,11 +10,11 @@
 
 
 @implementation SYPBXProjEncoder
--(NSString *)encode:(NSDictionary *)project
++(NSString *)encode:(NSDictionary *)project
 {
 	return [NSString stringWithFormat:@"// !$*UTF8*$!\n%@\n", [self encodeHash:project withIndentation:0]];
 }
--(NSString *)encodeHash:(NSDictionary *)hash withIndentation:(int)indent
++(NSString *)encodeHash:(NSDictionary *)hash withIndentation:(int)indent
 {
 	NSMutableString *ret = [NSMutableString stringWithString:@"{\n"];
 	NSArray *map = [[hash allKeys] sortedArrayUsingSelector:@selector(compare:)];
@@ -25,7 +25,7 @@
 	}
 	return ret;
 }
--(NSString *)encodeObject:(id)object withIndentation:(int)indent
++(NSString *)encodeObject:(id)object withIndentation:(int)indent
 {
 	if ([object isKindOfClass:[NSDictionary class]])
 	{
@@ -45,7 +45,7 @@
 		return nil;
 	}
 }
--(NSString *)encodeArray:(NSArray *)myArray withIndentation:(int)indent
++(NSString *)encodeArray:(NSArray *)myArray withIndentation:(int)indent
 {
 	NSMutableString *ret = [NSMutableString stringWithString:@"(\n"];
 	for (id value in myArray)
@@ -55,11 +55,11 @@
 	[ret appendFormat:@"%@)", [self encodeIndentation:indent]];
 	return ret;
 }
--(NSString *)encodeValue:(id)value withIndentation:(int)indent
++(NSString *)encodeValue:(id)value withIndentation:(int)indent
 {
 	return [value description]; //NSString doesn't have ruby's inspect. TODO: implement this or find a library that does
 }
--(NSString *)encodeIndentation:(int)indent
++(NSString *)encodeIndentation:(int)indent
 {
 	NSMutableString *ret = [NSMutableString string];
 	for (int i = 0; i < indent; i++)

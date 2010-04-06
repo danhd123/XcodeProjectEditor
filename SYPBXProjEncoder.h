@@ -12,10 +12,10 @@
 @interface SYPBXProjEncoder : NSObject {
 
 }
--(NSString *)encode:(NSDictionary *)project;
--(NSString *)encodeHash:(NSDictionary *)project withIndentation:(int)indent;
--(NSString *)encodeObject:(id)object withIndentation:(int)indent;
--(NSString *)encodeArray:(NSArray *)myArray withIndentation:(int)indent;
--(NSString *)encodeValue:(id)value withIndentation:(int)indent;
--(NSString *)encodeIndentation:(int)indent;
++(NSString *)encode:(NSDictionary *)project;
++(NSString *)encodeHash:(NSDictionary *)project withIndentation:(int)indent;
++(NSString *)encodeObject:(id)object withIndentation:(int)indent;
++(NSString *)encodeArray:(NSArray *)myArray withIndentation:(int)indent;
++(NSString *)encodeValue:(id)value withIndentation:(int)indent;
++(NSString *)encodeIndentation:(int)indent;
 @end

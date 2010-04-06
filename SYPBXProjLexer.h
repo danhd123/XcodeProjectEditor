@@ -23,5 +23,5 @@ enum token_types {
 @interface SYPBXProjLexer : NSObject {
 
 }
--(NSArray *)tokenize:(NSString *)source;
++(NSArray *)tokenize:(NSString *)source;
 @end

@@ -10,7 +10,7 @@
 #import "RegexKitLite.h"
 
 @implementation SYPBXProjLexer
--(NSArray *)tokenize:(NSString *)source
++(NSArray *)tokenize:(NSString *)source
 {
 	NSString *regexString = @"^\\/\\/ !\\$\\*(.*?)\\*\\$!";
 	//NSRange matchedRange = NSMakeRange(NSNotFound, 0UL);

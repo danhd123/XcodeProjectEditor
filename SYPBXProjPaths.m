@@ -11,7 +11,7 @@
 
 
 @implementation SYPBXProjPaths
--(NSString *)projectFileAt:(NSString *)basePath
++(NSString *)projectFileAt:(NSString *)basePath
 {
 	BOOL exists, isDirectory;
 	exists = [[NSFileManager defaultManager] fileExistsAtPath:basePath isDirectory:&isDirectory];
@@ -69,7 +69,7 @@
 	NSLog(@"Could not find Xcode project at %@", basePath);
 	return nil;
 }
--(NSString *)projectRootAt:(NSString *)basePath
++(NSString *)projectRootAt:(NSString *)basePath
 {
 	NSString *file = [self projectFileAt:basePath];
 	return [[file stringByDeletingLastPathComponent] stringByDeletingLastPathComponent];

@@ -12,5 +12,5 @@
 @interface SYPBXProjParser : NSObject {
 
 }
-- (NSArray *)parse:(NSString *)projectString;
++ (NSArray *)parse:(NSString *)projectString;
 @end

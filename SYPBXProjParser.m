@@ -11,11 +11,10 @@
 
 
 @implementation SYPBXProjParser
-- (NSArray *)parse:(NSString *)projectString
++ (NSArray *)parse:(NSString *)projectString
 {
 	NSMutableArray *context = [NSMutableArray arrayWithObject:[NSMutableArray array]];
-	SYPBXProjLexer *lexer = [SYPBXProjLexer new];
-	NSArray *tokens = [lexer tokenize:projectString];
+	NSArray *tokens = [SYPBXProjLexer tokenize:projectString];
 	//id lastToken = nil;
 	//this isn't used in the Ruby version either
 	for (id token in tokens)
