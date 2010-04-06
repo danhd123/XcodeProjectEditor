@@ -3,6 +3,21 @@ Xcode Project Editor
 Based on zerg-xcode
 
 TODO: just about everything. The lexer is done but needs testing.
+The parser is done but needs testing.
+The encoder is done but needs testing.
 
-License: Good question. MIT, for now.
+Hypothetically Frequently Asked Questions:
+
+Q: Umm... why? NSDictionary can already read in and write out .pbxproj files.
+A: Ah, but it doesn't do so correctly. NSDictionary adds a few crufty things,
+and writes it out in XML rather than old-style. And Xcode doesn't like that.
+It reverts it back to old-style when reopened. Plus NSDictionary has no
+conveniences for working with this sort of thing.
+
+Q: *raises eyebrow*
+A: Okay, you got me. If I'd realized NSDictionary could do this, I'd probably
+have just used that instead of trying to port Ruby code. Meh. Still the rest
+definitely needs to be written. 
+
+License: Good question. MIT, I guess.
 ©2010 Daniel DeCovnick
