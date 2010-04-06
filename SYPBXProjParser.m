@@ -16,7 +16,8 @@
 	NSMutableArray *context = [NSMutableArray arrayWithObject:[NSMutableArray array]];
 	SYPBXProjLexer *lexer = [SYPBXProjLexer new];
 	NSArray *tokens = [lexer tokenize:projectString];
-	id lastToken = nil;
+	//id lastToken = nil;
+	//this isn't used in the Ruby version either
 	for (id token in tokens)
 	{
 		if ([token isKindOfClass:[NSNumber class]])
@@ -35,7 +36,7 @@
 				[context removeLastObject];
 				if ([[context lastObject] isKindOfClass:[NSArray class]])
 				{
-					[[context lastObject] addObject:lastObject];
+					[[context lastObject] addObject:last_object];
 				}
 				else if ([[context lastObject] isKindOfClass:[NSString class]])
 				{

@@ -12,8 +12,8 @@
 @interface SYPBXProjEncoder : NSObject {
 
 }
--(NSString *)encode:(id)project;
--(NSString *)encodeHash:(id)project withIndentation:(int)indent;
+-(NSString *)encode:(NSDictionary *)project;
+-(NSString *)encodeHash:(NSDictionary *)project withIndentation:(int)indent;
 -(NSString *)encodeObject:(id)object withIndentation:(int)indent;
 -(NSString *)encodeArray:(NSArray *)myArray withIndentation:(int)indent;
 -(NSString *)encodeValue:(id)value withIndentation:(int)indent;

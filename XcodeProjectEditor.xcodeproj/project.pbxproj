@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1666FE841158C02AAC07 /* InfoPlist.strings */; };
 		8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
+		BC5A4CA0116B0A9C003B92FA /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BC5A4C9F116B0A9C003B92FA /* libicucore.dylib */; };
 		BC9FEE231165D31100FC8C7E /* SYPBXProjLexer.h in Headers */ = {isa = PBXBuildFile; fileRef = BC9FEE211165D31100FC8C7E /* SYPBXProjLexer.h */; };
 		BC9FEE241165D31100FC8C7E /* SYPBXProjLexer.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9FEE221165D31100FC8C7E /* SYPBXProjLexer.m */; };
 		BC9FEE271165D31E00FC8C7E /* SYPBXProjParser.h in Headers */ = {isa = PBXBuildFile; fileRef = BC9FEE251165D31E00FC8C7E /* SYPBXProjParser.h */; };
@@ -31,6 +32,7 @@
 		32DBCF5E0370ADEE00C91783 /* XcodeProjectEditor_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XcodeProjectEditor_Prefix.pch; sourceTree = "<group>"; };
 		8DC2EF5A0486A6940098B216 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DC2EF5B0486A6940098B216 /* XcodeProjectEditor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XcodeProjectEditor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC5A4C9F116B0A9C003B92FA /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = /usr/lib/libicucore.dylib; sourceTree = "<absolute>"; };
 		BC9FEE211165D31100FC8C7E /* SYPBXProjLexer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYPBXProjLexer.h; sourceTree = "<group>"; };
 		BC9FEE221165D31100FC8C7E /* SYPBXProjLexer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYPBXProjLexer.m; sourceTree = "<group>"; };
 		BC9FEE251165D31E00FC8C7E /* SYPBXProjParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYPBXProjParser.h; sourceTree = "<group>"; };
@@ -52,6 +54,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */,
+				BC5A4CA0116B0A9C003B92FA /* libicucore.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,18 +102,8 @@
 		08FB77AEFE84172EC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				BC9FEE361165D7FE00FC8C7E /* RegexKitLite.h */,
-				BC9FEE351165D7FE00FC8C7E /* RegexKitLite.m */,
-				BC9FEE251165D31E00FC8C7E /* SYPBXProjParser.h */,
-				BC9FEE261165D31E00FC8C7E /* SYPBXProjParser.m */,
-				BC9FEE291165D33000FC8C7E /* SYPBXProjArchiver.h */,
-				BC9FEE2A1165D33000FC8C7E /* SYPBXProjArchiver.m */,
-				BC9FEE2D1165D33800FC8C7E /* SYPBXProjEncoder.h */,
-				BC9FEE2E1165D33800FC8C7E /* SYPBXProjEncoder.m */,
-				BC9FEE311165D34A00FC8C7E /* SYPBXProjPaths.h */,
-				BC9FEE321165D34A00FC8C7E /* SYPBXProjPaths.m */,
-				BC9FEE211165D31100FC8C7E /* SYPBXProjLexer.h */,
-				BC9FEE221165D31100FC8C7E /* SYPBXProjLexer.m */,
+				BC5A4C1E116AFE39003B92FA /* Utils */,
+				BC5A4C1D116AFE1F003B92FA /* File */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -118,6 +111,7 @@
 		1058C7B0FEA5585E11CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BC5A4C9F116B0A9C003B92FA /* libicucore.dylib */,
 				1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */,
 			);
 			name = "Linked Frameworks";
@@ -139,6 +133,32 @@
 				32DBCF5E0370ADEE00C91783 /* XcodeProjectEditor_Prefix.pch */,
 			);
 			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		BC5A4C1D116AFE1F003B92FA /* File */ = {
+			isa = PBXGroup;
+			children = (
+				BC9FEE251165D31E00FC8C7E /* SYPBXProjParser.h */,
+				BC9FEE261165D31E00FC8C7E /* SYPBXProjParser.m */,
+				BC9FEE291165D33000FC8C7E /* SYPBXProjArchiver.h */,
+				BC9FEE2A1165D33000FC8C7E /* SYPBXProjArchiver.m */,
+				BC9FEE2D1165D33800FC8C7E /* SYPBXProjEncoder.h */,
+				BC9FEE2E1165D33800FC8C7E /* SYPBXProjEncoder.m */,
+				BC9FEE311165D34A00FC8C7E /* SYPBXProjPaths.h */,
+				BC9FEE321165D34A00FC8C7E /* SYPBXProjPaths.m */,
+				BC9FEE211165D31100FC8C7E /* SYPBXProjLexer.h */,
+				BC9FEE221165D31100FC8C7E /* SYPBXProjLexer.m */,
+			);
+			name = File;
+			sourceTree = "<group>";
+		};
+		BC5A4C1E116AFE39003B92FA /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				BC9FEE361165D7FE00FC8C7E /* RegexKitLite.h */,
+				BC9FEE351165D7FE00FC8C7E /* RegexKitLite.m */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -20,7 +20,7 @@
 	NSArray *map = [[hash allKeys] sortedArrayUsingSelector:@selector(compare:)];
 	for (id key in map)
 	{
-		[ret appendFormat:@"%@%@ = %@;\n", [self encodeIndentation:indent+1], [self encodeValue:key withIndentation:indent+1], [slelf encodeObject:[hash objectForKey:key] withIndentation:indent+1]];
+		[ret appendFormat:@"%@%@ = %@;\n", [self encodeIndentation:indent+1], [self encodeValue:key withIndentation:indent+1], [self encodeObject:[hash objectForKey:key] withIndentation:indent+1]];
 		[ret appendFormat:@"%@}", [self encodeIndentation:indent]];
 	}
 	return ret;
