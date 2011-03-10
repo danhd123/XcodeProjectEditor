@@ -10,6 +10,46 @@
 		8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1666FE841158C02AAC07 /* InfoPlist.strings */; };
 		8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
 		BC5A4CA0116B0A9C003B92FA /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BC5A4C9F116B0A9C003B92FA /* libicucore.dylib */; };
+		BC5A4CE1116B2029003B92FA /* XcodeObject.h in Headers */ = {isa = PBXBuildFile; fileRef = BC5A4CDF116B2029003B92FA /* XcodeObject.h */; };
+		BC5A4CE2116B2029003B92FA /* XcodeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5A4CE0116B2029003B92FA /* XcodeObject.m */; };
+		BC5A4CE6116B2056003B92FA /* XCConfigurationList.h in Headers */ = {isa = PBXBuildFile; fileRef = BC5A4CE4116B2056003B92FA /* XCConfigurationList.h */; };
+		BC5A4CE7116B2056003B92FA /* XCConfigurationList.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5A4CE5116B2056003B92FA /* XCConfigurationList.m */; };
+		BC5A4CEA116B206D003B92FA /* PBXBuildFile.h in Headers */ = {isa = PBXBuildFile; fileRef = BC5A4CE8116B206D003B92FA /* PBXBuildFile.h */; };
+		BC5A4CEB116B206D003B92FA /* PBXBuildFile.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5A4CE9116B206D003B92FA /* PBXBuildFile.m */; };
+		BC5A4CEE116B207B003B92FA /* PBXBuildPhase.h in Headers */ = {isa = PBXBuildFile; fileRef = BC5A4CEC116B207B003B92FA /* PBXBuildPhase.h */; };
+		BC5A4CEF116B207B003B92FA /* PBXBuildPhase.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5A4CED116B207B003B92FA /* PBXBuildPhase.m */; };
+		BC5A4CF2116B2089003B92FA /* PBXContainerItemProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = BC5A4CF0116B2089003B92FA /* PBXContainerItemProxy.h */; };
+		BC5A4CF3116B2089003B92FA /* PBXContainerItemProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5A4CF1116B2089003B92FA /* PBXContainerItemProxy.m */; };
+		BC5A4CF6116B2094003B92FA /* PBXGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = BC5A4CF4116B2094003B92FA /* PBXGroup.h */; };
+		BC5A4CF7116B2094003B92FA /* PBXGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5A4CF5116B2094003B92FA /* PBXGroup.m */; };
+		BC5A4CFA116B20A1003B92FA /* PBXNativeTarget.h in Headers */ = {isa = PBXBuildFile; fileRef = BC5A4CF8116B20A1003B92FA /* PBXNativeTarget.h */; };
+		BC5A4CFB116B20A1003B92FA /* PBXNativeTarget.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5A4CF9116B20A1003B92FA /* PBXNativeTarget.m */; };
+		BC5A4CFE116B20AE003B92FA /* PBXProject.h in Headers */ = {isa = PBXBuildFile; fileRef = BC5A4CFC116B20AE003B92FA /* PBXProject.h */; };
+		BC5A4CFF116B20AE003B92FA /* PBXProject.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5A4CFD116B20AE003B92FA /* PBXProject.m */; };
+		BC5A4D02116B20C4003B92FA /* PBXTargetDependency.h in Headers */ = {isa = PBXBuildFile; fileRef = BC5A4D00116B20C4003B92FA /* PBXTargetDependency.h */; };
+		BC5A4D03116B20C4003B92FA /* PBXTargetDependency.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5A4D01116B20C4003B92FA /* PBXTargetDependency.m */; };
+		BC5A4D28116ED765003B92FA /* PBXCopyFilesBuildPhase.h in Headers */ = {isa = PBXBuildFile; fileRef = BC5A4D26116ED765003B92FA /* PBXCopyFilesBuildPhase.h */; };
+		BC5A4D29116ED765003B92FA /* PBXCopyFilesBuildPhase.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5A4D27116ED765003B92FA /* PBXCopyFilesBuildPhase.m */; };
+		BC5A4D2C116F08AB003B92FA /* PBXFileReference.h in Headers */ = {isa = PBXBuildFile; fileRef = BC5A4D2A116F08AB003B92FA /* PBXFileReference.h */; };
+		BC5A4D2D116F08AB003B92FA /* PBXFileReference.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5A4D2B116F08AB003B92FA /* PBXFileReference.m */; };
+		BC5A4D30116F80F4003B92FA /* PBXFrameworksBuildPhase.h in Headers */ = {isa = PBXBuildFile; fileRef = BC5A4D2E116F80F4003B92FA /* PBXFrameworksBuildPhase.h */; };
+		BC5A4D31116F80F4003B92FA /* PBXFrameworksBuildPhase.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5A4D2F116F80F4003B92FA /* PBXFrameworksBuildPhase.m */; };
+		BC5A4E10116F86FE003B92FA /* PBXResourcesBuildPhase.h in Headers */ = {isa = PBXBuildFile; fileRef = BC5A4E0E116F86FE003B92FA /* PBXResourcesBuildPhase.h */; };
+		BC5A4E11116F86FE003B92FA /* PBXResourcesBuildPhase.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5A4E0F116F86FE003B92FA /* PBXResourcesBuildPhase.m */; };
+		BC5A4E14116F8738003B92FA /* PBXSourcesBuildPhase.h in Headers */ = {isa = PBXBuildFile; fileRef = BC5A4E12116F8738003B92FA /* PBXSourcesBuildPhase.h */; };
+		BC5A4E15116F8738003B92FA /* PBXSourcesBuildPhase.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5A4E13116F8738003B92FA /* PBXSourcesBuildPhase.m */; };
+		BC5A4E18116F8774003B92FA /* PBXVariantGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = BC5A4E16116F8774003B92FA /* PBXVariantGroup.h */; };
+		BC5A4E19116F8774003B92FA /* PBXVariantGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5A4E17116F8774003B92FA /* PBXVariantGroup.m */; };
+		BC5A4E1C116F87A5003B92FA /* XCBuildConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = BC5A4E1A116F87A5003B92FA /* XCBuildConfiguration.h */; };
+		BC5A4E1D116F87A5003B92FA /* XCBuildConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5A4E1B116F87A5003B92FA /* XCBuildConfiguration.m */; };
+		BC5A4E341170315B003B92FA /* XCVersionGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = BC5A4E321170315B003B92FA /* XCVersionGroup.h */; };
+		BC5A4E351170315B003B92FA /* XCVersionGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5A4E331170315B003B92FA /* XCVersionGroup.m */; };
+		BC5A4E5611703312003B92FA /* PBXShellScriptBuildPhase.h in Headers */ = {isa = PBXBuildFile; fileRef = BC5A4E5411703312003B92FA /* PBXShellScriptBuildPhase.h */; };
+		BC5A4E5711703312003B92FA /* PBXShellScriptBuildPhase.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5A4E5511703312003B92FA /* PBXShellScriptBuildPhase.m */; };
+		BC5A4E6F11703417003B92FA /* PBXReferenceProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = BC5A4E6D11703417003B92FA /* PBXReferenceProxy.h */; };
+		BC5A4E7011703417003B92FA /* PBXReferenceProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5A4E6E11703417003B92FA /* PBXReferenceProxy.m */; };
+		BC5A4E86117035B9003B92FA /* PBXAggregateTarget.h in Headers */ = {isa = PBXBuildFile; fileRef = BC5A4E84117035B9003B92FA /* PBXAggregateTarget.h */; };
+		BC5A4E87117035B9003B92FA /* PBXAggregateTarget.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5A4E85117035B9003B92FA /* PBXAggregateTarget.m */; };
 		BC9FEE231165D31100FC8C7E /* SYPBXProjLexer.h in Headers */ = {isa = PBXBuildFile; fileRef = BC9FEE211165D31100FC8C7E /* SYPBXProjLexer.h */; };
 		BC9FEE241165D31100FC8C7E /* SYPBXProjLexer.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9FEE221165D31100FC8C7E /* SYPBXProjLexer.m */; };
 		BC9FEE271165D31E00FC8C7E /* SYPBXProjParser.h in Headers */ = {isa = PBXBuildFile; fileRef = BC9FEE251165D31E00FC8C7E /* SYPBXProjParser.h */; };
@@ -22,6 +62,10 @@
 		BC9FEE341165D34A00FC8C7E /* SYPBXProjPaths.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9FEE321165D34A00FC8C7E /* SYPBXProjPaths.m */; };
 		BC9FEE371165D7FE00FC8C7E /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9FEE351165D7FE00FC8C7E /* RegexKitLite.m */; };
 		BC9FEE381165D7FE00FC8C7E /* RegexKitLite.h in Headers */ = {isa = PBXBuildFile; fileRef = BC9FEE361165D7FE00FC8C7E /* RegexKitLite.h */; };
+		BCD846261191DA4000D5234C /* SYXCProjFileUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = BCD846241191DA4000D5234C /* SYXCProjFileUtils.h */; };
+		BCD846271191DA4000D5234C /* SYXCProjFileUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD846251191DA4000D5234C /* SYXCProjFileUtils.m */; };
+		BCE642231328E19600DD2F43 /* PBXHeadersBuildPhase.h in Headers */ = {isa = PBXBuildFile; fileRef = BCE642211328E19600DD2F43 /* PBXHeadersBuildPhase.h */; };
+		BCE642241328E19600DD2F43 /* PBXHeadersBuildPhase.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE642221328E19600DD2F43 /* PBXHeadersBuildPhase.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +77,46 @@
 		8DC2EF5A0486A6940098B216 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DC2EF5B0486A6940098B216 /* XcodeProjectEditor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XcodeProjectEditor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC5A4C9F116B0A9C003B92FA /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = /usr/lib/libicucore.dylib; sourceTree = "<absolute>"; };
+		BC5A4CDF116B2029003B92FA /* XcodeObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XcodeObject.h; sourceTree = "<group>"; };
+		BC5A4CE0116B2029003B92FA /* XcodeObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XcodeObject.m; sourceTree = "<group>"; };
+		BC5A4CE4116B2056003B92FA /* XCConfigurationList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCConfigurationList.h; sourceTree = "<group>"; };
+		BC5A4CE5116B2056003B92FA /* XCConfigurationList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCConfigurationList.m; sourceTree = "<group>"; };
+		BC5A4CE8116B206D003B92FA /* PBXBuildFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBXBuildFile.h; sourceTree = "<group>"; };
+		BC5A4CE9116B206D003B92FA /* PBXBuildFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBXBuildFile.m; sourceTree = "<group>"; };
+		BC5A4CEC116B207B003B92FA /* PBXBuildPhase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBXBuildPhase.h; sourceTree = "<group>"; };
+		BC5A4CED116B207B003B92FA /* PBXBuildPhase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBXBuildPhase.m; sourceTree = "<group>"; };
+		BC5A4CF0116B2089003B92FA /* PBXContainerItemProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBXContainerItemProxy.h; sourceTree = "<group>"; };
+		BC5A4CF1116B2089003B92FA /* PBXContainerItemProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBXContainerItemProxy.m; sourceTree = "<group>"; };
+		BC5A4CF4116B2094003B92FA /* PBXGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBXGroup.h; sourceTree = "<group>"; };
+		BC5A4CF5116B2094003B92FA /* PBXGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBXGroup.m; sourceTree = "<group>"; };
+		BC5A4CF8116B20A1003B92FA /* PBXNativeTarget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBXNativeTarget.h; sourceTree = "<group>"; };
+		BC5A4CF9116B20A1003B92FA /* PBXNativeTarget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBXNativeTarget.m; sourceTree = "<group>"; };
+		BC5A4CFC116B20AE003B92FA /* PBXProject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBXProject.h; sourceTree = "<group>"; };
+		BC5A4CFD116B20AE003B92FA /* PBXProject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBXProject.m; sourceTree = "<group>"; };
+		BC5A4D00116B20C4003B92FA /* PBXTargetDependency.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBXTargetDependency.h; sourceTree = "<group>"; };
+		BC5A4D01116B20C4003B92FA /* PBXTargetDependency.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBXTargetDependency.m; sourceTree = "<group>"; };
+		BC5A4D26116ED765003B92FA /* PBXCopyFilesBuildPhase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBXCopyFilesBuildPhase.h; sourceTree = "<group>"; };
+		BC5A4D27116ED765003B92FA /* PBXCopyFilesBuildPhase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBXCopyFilesBuildPhase.m; sourceTree = "<group>"; };
+		BC5A4D2A116F08AB003B92FA /* PBXFileReference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBXFileReference.h; sourceTree = "<group>"; };
+		BC5A4D2B116F08AB003B92FA /* PBXFileReference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBXFileReference.m; sourceTree = "<group>"; };
+		BC5A4D2E116F80F4003B92FA /* PBXFrameworksBuildPhase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBXFrameworksBuildPhase.h; sourceTree = "<group>"; };
+		BC5A4D2F116F80F4003B92FA /* PBXFrameworksBuildPhase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBXFrameworksBuildPhase.m; sourceTree = "<group>"; };
+		BC5A4E0E116F86FE003B92FA /* PBXResourcesBuildPhase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBXResourcesBuildPhase.h; sourceTree = "<group>"; };
+		BC5A4E0F116F86FE003B92FA /* PBXResourcesBuildPhase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBXResourcesBuildPhase.m; sourceTree = "<group>"; };
+		BC5A4E12116F8738003B92FA /* PBXSourcesBuildPhase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBXSourcesBuildPhase.h; sourceTree = "<group>"; };
+		BC5A4E13116F8738003B92FA /* PBXSourcesBuildPhase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBXSourcesBuildPhase.m; sourceTree = "<group>"; };
+		BC5A4E16116F8774003B92FA /* PBXVariantGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBXVariantGroup.h; sourceTree = "<group>"; };
+		BC5A4E17116F8774003B92FA /* PBXVariantGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBXVariantGroup.m; sourceTree = "<group>"; };
+		BC5A4E1A116F87A5003B92FA /* XCBuildConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCBuildConfiguration.h; sourceTree = "<group>"; };
+		BC5A4E1B116F87A5003B92FA /* XCBuildConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCBuildConfiguration.m; sourceTree = "<group>"; };
+		BC5A4E321170315B003B92FA /* XCVersionGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCVersionGroup.h; sourceTree = "<group>"; };
+		BC5A4E331170315B003B92FA /* XCVersionGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCVersionGroup.m; sourceTree = "<group>"; };
+		BC5A4E5411703312003B92FA /* PBXShellScriptBuildPhase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBXShellScriptBuildPhase.h; sourceTree = "<group>"; };
+		BC5A4E5511703312003B92FA /* PBXShellScriptBuildPhase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBXShellScriptBuildPhase.m; sourceTree = "<group>"; };
+		BC5A4E6D11703417003B92FA /* PBXReferenceProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBXReferenceProxy.h; sourceTree = "<group>"; };
+		BC5A4E6E11703417003B92FA /* PBXReferenceProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBXReferenceProxy.m; sourceTree = "<group>"; };
+		BC5A4E84117035B9003B92FA /* PBXAggregateTarget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBXAggregateTarget.h; sourceTree = "<group>"; };
+		BC5A4E85117035B9003B92FA /* PBXAggregateTarget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBXAggregateTarget.m; sourceTree = "<group>"; };
 		BC9FEE211165D31100FC8C7E /* SYPBXProjLexer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYPBXProjLexer.h; sourceTree = "<group>"; };
 		BC9FEE221165D31100FC8C7E /* SYPBXProjLexer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYPBXProjLexer.m; sourceTree = "<group>"; };
 		BC9FEE251165D31E00FC8C7E /* SYPBXProjParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYPBXProjParser.h; sourceTree = "<group>"; };
@@ -45,6 +129,10 @@
 		BC9FEE321165D34A00FC8C7E /* SYPBXProjPaths.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYPBXProjPaths.m; sourceTree = "<group>"; };
 		BC9FEE351165D7FE00FC8C7E /* RegexKitLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegexKitLite.m; sourceTree = "<group>"; };
 		BC9FEE361165D7FE00FC8C7E /* RegexKitLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegexKitLite.h; sourceTree = "<group>"; };
+		BCD846241191DA4000D5234C /* SYXCProjFileUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYXCProjFileUtils.h; sourceTree = "<group>"; };
+		BCD846251191DA4000D5234C /* SYXCProjFileUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYXCProjFileUtils.m; sourceTree = "<group>"; };
+		BCE642211328E19600DD2F43 /* PBXHeadersBuildPhase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBXHeadersBuildPhase.h; sourceTree = "<group>"; };
+		BCE642221328E19600DD2F43 /* PBXHeadersBuildPhase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBXHeadersBuildPhase.m; sourceTree = "<group>"; };
 		D2F7E79907B2D74100F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
@@ -104,6 +192,7 @@
 			children = (
 				BC5A4C1E116AFE39003B92FA /* Utils */,
 				BC5A4C1D116AFE1F003B92FA /* File */,
+				BC5A4CE3116B202C003B92FA /* Objects */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -148,6 +237,8 @@
 				BC9FEE321165D34A00FC8C7E /* SYPBXProjPaths.m */,
 				BC9FEE211165D31100FC8C7E /* SYPBXProjLexer.h */,
 				BC9FEE221165D31100FC8C7E /* SYPBXProjLexer.m */,
+				BCD846241191DA4000D5234C /* SYXCProjFileUtils.h */,
+				BCD846251191DA4000D5234C /* SYXCProjFileUtils.m */,
 			);
 			name = File;
 			sourceTree = "<group>";
@@ -159,6 +250,55 @@
 				BC9FEE351165D7FE00FC8C7E /* RegexKitLite.m */,
 			);
 			name = Utils;
+			sourceTree = "<group>";
+		};
+		BC5A4CE3116B202C003B92FA /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				BC5A4E6D11703417003B92FA /* PBXReferenceProxy.h */,
+				BC5A4E6E11703417003B92FA /* PBXReferenceProxy.m */,
+				BC5A4E5411703312003B92FA /* PBXShellScriptBuildPhase.h */,
+				BC5A4E5511703312003B92FA /* PBXShellScriptBuildPhase.m */,
+				BC5A4E321170315B003B92FA /* XCVersionGroup.h */,
+				BC5A4E331170315B003B92FA /* XCVersionGroup.m */,
+				BC5A4E1A116F87A5003B92FA /* XCBuildConfiguration.h */,
+				BC5A4E1B116F87A5003B92FA /* XCBuildConfiguration.m */,
+				BC5A4E16116F8774003B92FA /* PBXVariantGroup.h */,
+				BC5A4E17116F8774003B92FA /* PBXVariantGroup.m */,
+				BC5A4E12116F8738003B92FA /* PBXSourcesBuildPhase.h */,
+				BC5A4E13116F8738003B92FA /* PBXSourcesBuildPhase.m */,
+				BC5A4E84117035B9003B92FA /* PBXAggregateTarget.h */,
+				BC5A4E85117035B9003B92FA /* PBXAggregateTarget.m */,
+				BC5A4D2E116F80F4003B92FA /* PBXFrameworksBuildPhase.h */,
+				BC5A4D2F116F80F4003B92FA /* PBXFrameworksBuildPhase.m */,
+				BCE642211328E19600DD2F43 /* PBXHeadersBuildPhase.h */,
+				BCE642221328E19600DD2F43 /* PBXHeadersBuildPhase.m */,
+				BC5A4D2A116F08AB003B92FA /* PBXFileReference.h */,
+				BC5A4D2B116F08AB003B92FA /* PBXFileReference.m */,
+				BC5A4D26116ED765003B92FA /* PBXCopyFilesBuildPhase.h */,
+				BC5A4D27116ED765003B92FA /* PBXCopyFilesBuildPhase.m */,
+				BC5A4CE8116B206D003B92FA /* PBXBuildFile.h */,
+				BC5A4CE9116B206D003B92FA /* PBXBuildFile.m */,
+				BC5A4E0E116F86FE003B92FA /* PBXResourcesBuildPhase.h */,
+				BC5A4E0F116F86FE003B92FA /* PBXResourcesBuildPhase.m */,
+				BC5A4CEC116B207B003B92FA /* PBXBuildPhase.h */,
+				BC5A4CED116B207B003B92FA /* PBXBuildPhase.m */,
+				BC5A4CF0116B2089003B92FA /* PBXContainerItemProxy.h */,
+				BC5A4CF1116B2089003B92FA /* PBXContainerItemProxy.m */,
+				BC5A4CF4116B2094003B92FA /* PBXGroup.h */,
+				BC5A4CF5116B2094003B92FA /* PBXGroup.m */,
+				BC5A4CF8116B20A1003B92FA /* PBXNativeTarget.h */,
+				BC5A4CF9116B20A1003B92FA /* PBXNativeTarget.m */,
+				BC5A4CFC116B20AE003B92FA /* PBXProject.h */,
+				BC5A4CFD116B20AE003B92FA /* PBXProject.m */,
+				BC5A4D00116B20C4003B92FA /* PBXTargetDependency.h */,
+				BC5A4D01116B20C4003B92FA /* PBXTargetDependency.m */,
+				BC5A4CDF116B2029003B92FA /* XcodeObject.h */,
+				BC5A4CE0116B2029003B92FA /* XcodeObject.m */,
+				BC5A4CE4116B2056003B92FA /* XCConfigurationList.h */,
+				BC5A4CE5116B2056003B92FA /* XCConfigurationList.m */,
+			);
+			name = Objects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,6 +314,28 @@
 				BC9FEE2F1165D33800FC8C7E /* SYPBXProjEncoder.h in Headers */,
 				BC9FEE331165D34A00FC8C7E /* SYPBXProjPaths.h in Headers */,
 				BC9FEE381165D7FE00FC8C7E /* RegexKitLite.h in Headers */,
+				BC5A4CE1116B2029003B92FA /* XcodeObject.h in Headers */,
+				BC5A4CE6116B2056003B92FA /* XCConfigurationList.h in Headers */,
+				BC5A4CEA116B206D003B92FA /* PBXBuildFile.h in Headers */,
+				BC5A4CEE116B207B003B92FA /* PBXBuildPhase.h in Headers */,
+				BC5A4CF2116B2089003B92FA /* PBXContainerItemProxy.h in Headers */,
+				BC5A4CF6116B2094003B92FA /* PBXGroup.h in Headers */,
+				BC5A4CFA116B20A1003B92FA /* PBXNativeTarget.h in Headers */,
+				BC5A4CFE116B20AE003B92FA /* PBXProject.h in Headers */,
+				BC5A4D02116B20C4003B92FA /* PBXTargetDependency.h in Headers */,
+				BC5A4D28116ED765003B92FA /* PBXCopyFilesBuildPhase.h in Headers */,
+				BC5A4D2C116F08AB003B92FA /* PBXFileReference.h in Headers */,
+				BC5A4D30116F80F4003B92FA /* PBXFrameworksBuildPhase.h in Headers */,
+				BC5A4E10116F86FE003B92FA /* PBXResourcesBuildPhase.h in Headers */,
+				BC5A4E14116F8738003B92FA /* PBXSourcesBuildPhase.h in Headers */,
+				BC5A4E18116F8774003B92FA /* PBXVariantGroup.h in Headers */,
+				BC5A4E1C116F87A5003B92FA /* XCBuildConfiguration.h in Headers */,
+				BC5A4E341170315B003B92FA /* XCVersionGroup.h in Headers */,
+				BC5A4E5611703312003B92FA /* PBXShellScriptBuildPhase.h in Headers */,
+				BC5A4E6F11703417003B92FA /* PBXReferenceProxy.h in Headers */,
+				BC5A4E86117035B9003B92FA /* PBXAggregateTarget.h in Headers */,
+				BCD846261191DA4000D5234C /* SYXCProjFileUtils.h in Headers */,
+				BCE642231328E19600DD2F43 /* PBXHeadersBuildPhase.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +401,28 @@
 				BC9FEE301165D33800FC8C7E /* SYPBXProjEncoder.m in Sources */,
 				BC9FEE341165D34A00FC8C7E /* SYPBXProjPaths.m in Sources */,
 				BC9FEE371165D7FE00FC8C7E /* RegexKitLite.m in Sources */,
+				BC5A4CE2116B2029003B92FA /* XcodeObject.m in Sources */,
+				BC5A4CE7116B2056003B92FA /* XCConfigurationList.m in Sources */,
+				BC5A4CEB116B206D003B92FA /* PBXBuildFile.m in Sources */,
+				BC5A4CEF116B207B003B92FA /* PBXBuildPhase.m in Sources */,
+				BC5A4CF3116B2089003B92FA /* PBXContainerItemProxy.m in Sources */,
+				BC5A4CF7116B2094003B92FA /* PBXGroup.m in Sources */,
+				BC5A4CFB116B20A1003B92FA /* PBXNativeTarget.m in Sources */,
+				BC5A4CFF116B20AE003B92FA /* PBXProject.m in Sources */,
+				BC5A4D03116B20C4003B92FA /* PBXTargetDependency.m in Sources */,
+				BC5A4D29116ED765003B92FA /* PBXCopyFilesBuildPhase.m in Sources */,
+				BC5A4D2D116F08AB003B92FA /* PBXFileReference.m in Sources */,
+				BC5A4D31116F80F4003B92FA /* PBXFrameworksBuildPhase.m in Sources */,
+				BC5A4E11116F86FE003B92FA /* PBXResourcesBuildPhase.m in Sources */,
+				BC5A4E15116F8738003B92FA /* PBXSourcesBuildPhase.m in Sources */,
+				BC5A4E19116F8774003B92FA /* PBXVariantGroup.m in Sources */,
+				BC5A4E1D116F87A5003B92FA /* XCBuildConfiguration.m in Sources */,
+				BC5A4E351170315B003B92FA /* XCVersionGroup.m in Sources */,
+				BC5A4E5711703312003B92FA /* PBXShellScriptBuildPhase.m in Sources */,
+				BC5A4E7011703417003B92FA /* PBXReferenceProxy.m in Sources */,
+				BC5A4E87117035B9003B92FA /* PBXAggregateTarget.m in Sources */,
+				BCD846271191DA4000D5234C /* SYXCProjFileUtils.m in Sources */,
+				BCE642241328E19600DD2F43 /* PBXHeadersBuildPhase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +485,7 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				ONLY_ACTIVE_ARCH = YES;

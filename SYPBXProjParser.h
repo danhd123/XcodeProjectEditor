@@ -12,5 +12,6 @@
 @interface SYPBXProjParser : NSObject {
 
 }
-+ (NSArray *)parse:(NSString *)projectString;
++ (NSDictionary *)parse:(NSString *)projectString;
++ (NSDictionary *)hashFromFile:(NSString *)filePath;
 @end

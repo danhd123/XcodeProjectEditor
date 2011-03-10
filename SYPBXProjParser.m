@@ -11,9 +11,9 @@
 
 
 @implementation SYPBXProjParser
-+ (NSArray *)parse:(NSString *)projectString
++ (NSDictionary *)parse:(NSString *)projectString
 {
-	NSMutableArray *context = [NSMutableArray arrayWithObject:[NSMutableArray array]];
+	NSMutableArray *context = [NSMutableArray array];
 	NSArray *tokens = [SYPBXProjLexer tokenize:projectString];
 	//id lastToken = nil;
 	//this isn't used in the Ruby version either
@@ -75,7 +75,7 @@
 				else
 				{
 					NSLog(@"Something went wrong parsing. Here's the conext: %@", context);
-					exit(1);
+					return nil;
 				}
 			}
 		}
@@ -85,7 +85,11 @@
 		}
 	}
 	return [[context objectAtIndex:0] objectAtIndex:0]; 
-	//this seems wrong. I think should always return the blank NSMutableArray declared at the beginning inner to context
-}
 
+}
+//Just in case, and I can still use the encoder to write out an old-style plist 
++ (NSDictionary *)hashFromFile:(NSString *)filePath
+{
+	return [NSDictionary dictionaryWithContentsOfFile:filePath];
+}
 @end

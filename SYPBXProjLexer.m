@@ -97,7 +97,7 @@
 					else 
 					{
 						NSLog(@"Something went wrong in tokenizing - unknown escape sequence");
-						exit(1);
+						return nil;
 					}
 				}
 				else
