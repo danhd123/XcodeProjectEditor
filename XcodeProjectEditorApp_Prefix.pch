@@ -1,0 +1,8 @@
+//
+// Prefix header for all source files of the 'XcodeProjectEditorApp' target in the 'XcodeProjectEditor' project.
+//
+
+#ifdef __OBJC__
+#import <Cocoa/Cocoa.h>
+#define SYRelease(var) { [var release]; var = nil; }
+#endif

@@ -50,6 +50,11 @@
 		BC5A4E7011703417003B92FA /* PBXReferenceProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5A4E6E11703417003B92FA /* PBXReferenceProxy.m */; };
 		BC5A4E86117035B9003B92FA /* PBXAggregateTarget.h in Headers */ = {isa = PBXBuildFile; fileRef = BC5A4E84117035B9003B92FA /* PBXAggregateTarget.h */; };
 		BC5A4E87117035B9003B92FA /* PBXAggregateTarget.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5A4E85117035B9003B92FA /* PBXAggregateTarget.m */; };
+		BC63A9471337564B000DD0DB /* XcodeProjectEditor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC2EF5B0486A6940098B216 /* XcodeProjectEditor.framework */; };
+		BC63A94A13375660000DD0DB /* XcodeProjectEditor.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8DC2EF5B0486A6940098B216 /* XcodeProjectEditor.framework */; };
+		BC63A94F1337567E000DD0DB /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC63A94E1337567E000DD0DB /* MainMenu.xib */; };
+		BC63A95413375767000DD0DB /* XPEAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BC63A95313375767000DD0DB /* XPEAppDelegate.m */; };
+		BC63A96113375BEC000DD0DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BC63A96013375BEC000DD0DB /* main.m */; };
 		BC9FEE231165D31100FC8C7E /* SYPBXProjLexer.h in Headers */ = {isa = PBXBuildFile; fileRef = BC9FEE211165D31100FC8C7E /* SYPBXProjLexer.h */; };
 		BC9FEE241165D31100FC8C7E /* SYPBXProjLexer.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9FEE221165D31100FC8C7E /* SYPBXProjLexer.m */; };
 		BC9FEE271165D31E00FC8C7E /* SYPBXProjParser.h in Headers */ = {isa = PBXBuildFile; fileRef = BC9FEE251165D31E00FC8C7E /* SYPBXProjParser.h */; };
@@ -67,6 +72,29 @@
 		BCE642231328E19600DD2F43 /* PBXHeadersBuildPhase.h in Headers */ = {isa = PBXBuildFile; fileRef = BCE642211328E19600DD2F43 /* PBXHeadersBuildPhase.h */; };
 		BCE642241328E19600DD2F43 /* PBXHeadersBuildPhase.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE642221328E19600DD2F43 /* PBXHeadersBuildPhase.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BC63A9961337645E000DD0DB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216 /* XcodeProjectEditor */;
+			remoteInfo = XcodeProjectEditor;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BC63A94D13375678000DD0DB /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BC63A94A13375660000DD0DB /* XcodeProjectEditor.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0867D69BFE84028FC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
@@ -117,6 +145,13 @@
 		BC5A4E6E11703417003B92FA /* PBXReferenceProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBXReferenceProxy.m; sourceTree = "<group>"; };
 		BC5A4E84117035B9003B92FA /* PBXAggregateTarget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBXAggregateTarget.h; sourceTree = "<group>"; };
 		BC5A4E85117035B9003B92FA /* PBXAggregateTarget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBXAggregateTarget.m; sourceTree = "<group>"; };
+		BC63A934133755B3000DD0DB /* XcodeProjectEditorApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XcodeProjectEditorApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC63A936133755B3000DD0DB /* XcodeProjectEditorApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "XcodeProjectEditorApp-Info.plist"; sourceTree = "<group>"; };
+		BC63A94B13375678000DD0DB /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		BC63A95213375767000DD0DB /* XPEAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPEAppDelegate.h; sourceTree = "<group>"; };
+		BC63A95313375767000DD0DB /* XPEAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPEAppDelegate.m; sourceTree = "<group>"; };
+		BC63A95C13375B92000DD0DB /* XcodeProjectEditorApp_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XcodeProjectEditorApp_Prefix.pch; sourceTree = "<group>"; };
+		BC63A96013375BEC000DD0DB /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BC9FEE211165D31100FC8C7E /* SYPBXProjLexer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYPBXProjLexer.h; sourceTree = "<group>"; };
 		BC9FEE221165D31100FC8C7E /* SYPBXProjLexer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYPBXProjLexer.m; sourceTree = "<group>"; };
 		BC9FEE251165D31E00FC8C7E /* SYPBXProjParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYPBXProjParser.h; sourceTree = "<group>"; };
@@ -146,6 +181,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BC63A932133755B2000DD0DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC63A9471337564B000DD0DB /* XcodeProjectEditor.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -153,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				8DC2EF5B0486A6940098B216 /* XcodeProjectEditor.framework */,
+				BC63A934133755B3000DD0DB /* XcodeProjectEditorApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -160,11 +204,13 @@
 		0867D691FE84028FC02AAC07 /* XcodeProjectEditor */ = {
 			isa = PBXGroup;
 			children = (
+				BC63A9431337560F000DD0DB /* App */,
 				08FB77AEFE84172EC02AAC07 /* Classes */,
 				32C88DFF0371C24200C91783 /* Other Sources */,
 				089C1665FE841158C02AAC07 /* Resources */,
 				0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */,
 				034768DFFF38A50411DB9C8B /* Products */,
+				BC63A936133755B3000DD0DB /* XcodeProjectEditorApp-Info.plist */,
 			);
 			name = XcodeProjectEditor;
 			sourceTree = "<group>";
@@ -301,6 +347,42 @@
 			name = Objects;
 			sourceTree = "<group>";
 		};
+		BC63A9431337560F000DD0DB /* App */ = {
+			isa = PBXGroup;
+			children = (
+				BC63A9441337561B000DD0DB /* Classes */,
+				BC63A94513375622000DD0DB /* Other Sources */,
+				BC63A9461337562D000DD0DB /* Resources */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
+		BC63A9441337561B000DD0DB /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				BC63A95213375767000DD0DB /* XPEAppDelegate.h */,
+				BC63A95313375767000DD0DB /* XPEAppDelegate.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		BC63A94513375622000DD0DB /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				BC63A95C13375B92000DD0DB /* XcodeProjectEditorApp_Prefix.pch */,
+				BC63A96013375BEC000DD0DB /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		BC63A9461337562D000DD0DB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BC63A94E1337567E000DD0DB /* MainMenu.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -361,6 +443,25 @@
 			productReference = 8DC2EF5B0486A6940098B216 /* XcodeProjectEditor.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		BC63A933133755B2000DD0DB /* XcodeProjectEditorApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC63A939133755B4000DD0DB /* Build configuration list for PBXNativeTarget "XcodeProjectEditorApp" */;
+			buildPhases = (
+				BC63A930133755B2000DD0DB /* Resources */,
+				BC63A931133755B2000DD0DB /* Sources */,
+				BC63A932133755B2000DD0DB /* Frameworks */,
+				BC63A94D13375678000DD0DB /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BC63A9971337645E000DD0DB /* PBXTargetDependency */,
+			);
+			name = XcodeProjectEditorApp;
+			productName = XcodeProjectEditorApp;
+			productReference = BC63A934133755B3000DD0DB /* XcodeProjectEditorApp.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -375,6 +476,7 @@
 			projectRoot = "";
 			targets = (
 				8DC2EF4F0486A6940098B216 /* XcodeProjectEditor */,
+				BC63A933133755B2000DD0DB /* XcodeProjectEditorApp */,
 			);
 		};
 /* End PBXProject section */
@@ -385,6 +487,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC63A930133755B2000DD0DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC63A94F1337567E000DD0DB /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,7 +536,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BC63A931133755B2000DD0DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC63A95413375767000DD0DB /* XPEAppDelegate.m in Sources */,
+				BC63A96113375BEC000DD0DB /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BC63A9971337645E000DD0DB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8DC2EF4F0486A6940098B216 /* XcodeProjectEditor */;
+			targetProxy = BC63A9961337645E000DD0DB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		089C1666FE841158C02AAC07 /* InfoPlist.strings */ = {
@@ -435,6 +562,14 @@
 				089C1667FE841158C02AAC07 /* English */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		BC63A94E1337567E000DD0DB /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BC63A94B13375678000DD0DB /* English */,
+			);
+			name = MainMenu.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -509,6 +644,54 @@
 			};
 			name = Release;
 		};
+		BC63A937133755B3000DD0DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = XcodeProjectEditorApp_Prefix.pch;
+				INFOPLIST_FILE = "XcodeProjectEditorApp-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = XcodeProjectEditorApp;
+			};
+			name = Debug;
+		};
+		BC63A938133755B3000DD0DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = XcodeProjectEditorApp_Prefix.pch;
+				INFOPLIST_FILE = "XcodeProjectEditorApp-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = XcodeProjectEditorApp;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -526,6 +709,15 @@
 			buildConfigurations = (
 				1DEB91B208733DA50010E9CD /* Debug */,
 				1DEB91B308733DA50010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BC63A939133755B4000DD0DB /* Build configuration list for PBXNativeTarget "XcodeProjectEditorApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC63A937133755B3000DD0DB /* Debug */,
+				BC63A938133755B3000DD0DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
