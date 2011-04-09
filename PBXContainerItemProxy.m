@@ -7,13 +7,23 @@
 //
 
 #import "PBXContainerItemProxy.h"
+#import "SYPBXProjArchiver.h"
 
 
 @implementation PBXContainerItemProxy
-@synthesize containerPortal;
 @synthesize proxyType;
 @synthesize remoteGlobalIDString;
 @synthesize remoteInfo;
+-(PBXProject *)containerPortal
+{
+	return [self.archiver.objectsByArchiveIDs objectForKey:containerPortal];
+}
+-(void)setContainerPortal:(NSString *)contPort
+{
+	[contPort retain];
+	[containerPortal release];
+	containerPortal = contPort;
+}
 - (NSDictionary *)attrs
 {
 	NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObjectsAndKeys:

@@ -25,7 +25,7 @@
 	{
 		path = [path substringToIndex:[path length]-2];
 	}
-	if (![path isMatchedByRegex:@"/\\.xcodeproj$"])
+	if (![path isMatchedByRegex:@"\\.xcodeproj$"])
 	{
 		path = [path stringByAppendingString:@".xcodeproj"];
 	}

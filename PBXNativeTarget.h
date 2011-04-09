@@ -15,7 +15,7 @@
 	NSString *buildConfigurationList;
 	NSArray *buildPhases;
 	NSArray *buildRules;
-	NSArray *dependecies;
+	NSArray *dependencies;
 	NSString *name;
 	NSString *productInstallPath;
 	NSString *productName;
@@ -26,7 +26,7 @@
 - (void)setBuildConfigurationList:(NSString *)newList;
 @property(retain) NSArray *buildPhases;
 @property(retain) NSArray *buildRules;
-@property(retain) NSArray *dependecies;
+@property(retain) NSArray *dependencies;
 @property(retain) NSString *name;
 @property(retain) NSString *productInstallPath;
 @property(retain) NSString *productName;

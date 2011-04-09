@@ -9,12 +9,16 @@
 #import <Cocoa/Cocoa.h>
 #import "XcodeObject.h"
 
-@class PBXContainerItemProxy;
+@class PBXContainerItemProxy, PBXNativeTarget;
 
 @interface PBXTargetDependency : XcodeObject {
 	NSString *name;
-	PBXContainerItemProxy *targetProxy;
+	NSString *targetProxy;
+	NSString *target;
 }
 @property(retain) NSString *name;
-@property(retain) PBXContainerItemProxy *targetProxy;
+-(PBXContainerItemProxy *)targetProxy;
+-(void)setTargetProxy:(NSString *)tp;
+-(PBXNativeTarget *)target;
+-(void)setTarget:(NSString *)t;
 @end

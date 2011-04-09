@@ -10,7 +10,7 @@
 
 
 @implementation XCVersionGroup
-@synthesize children;
+@synthesize children; //TODO: check if children needs to be expanded - get a pbxproj with one of these!
 @synthesize path;
 @synthesize sourceTree;
 @synthesize versionGroupType;

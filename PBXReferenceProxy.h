@@ -14,11 +14,12 @@
 @interface PBXReferenceProxy : XcodeObject {
 	NSString *fileType;
 	NSString *path;
-	PBXContainerItemProxy *remoteRef;
+	NSString *remoteRef;
 	NSString *sourceTree;
 }
 @property(retain) NSString *fileType;
 @property(retain) NSString *path;
-@property(retain) PBXContainerItemProxy *remoteRef;
+-(PBXContainerItemProxy *)remoteRef;
+-(void)setRemoteRef:(NSString *)newRemoteRef;
 @property(retain) NSString *sourceTree;
 @end

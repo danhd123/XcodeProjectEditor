@@ -7,13 +7,33 @@
 //
 
 #import "XPEAppDelegate.h"
-
+#import "SYPBXProjArchiver.h"
+#import "PBXProject.h"
+#import "SYXCProjFileUtils.h"
 
 @implementation XPEAppDelegate
+
+-(id)init
+{
+	self = [super init];
+	if (self != nil)
+	{
+		archiver = nil;
+		project = nil;
+	}
+	return self;
+}
 - (IBAction)parse:(id)sender
 {
-	NSString *string = [[NSString alloc] initWithString:@"Parse Button Works"];
-	NSLog(@"%@", string);
-	SYRelease(string); //testing the PCH
+	NSString *filePath = [pathBox stringValue];
+	archiver = [[SYXCProjFileUtils loadProjectAt:filePath] retain];
+	project = [[archiver unarchive] retain];
+	[textView setString:[[[project hashRepresentation] description] stringByAppendingString:[[[project targets] valueForKey:@"hashRepresentation"] description]]];
+}
+- (void)dealloc
+{
+	[archiver release];
+	[project release];
+	[super dealloc];
 }
 @end

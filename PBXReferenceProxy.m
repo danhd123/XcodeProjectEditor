@@ -7,13 +7,24 @@
 //
 
 #import "PBXReferenceProxy.h"
+#import "SYPBXProjArchiver.h"
 
 
 @implementation PBXReferenceProxy
 @synthesize fileType;
 @synthesize path;
-@synthesize remoteRef;
 @synthesize sourceTree;
+-(PBXContainerItemProxy *)remoteRef
+{
+	return [self.archiver.objectsByArchiveIDs objectForKey:remoteRef];
+}
+-(void)setRemoteRef:(NSString *)newRemoteRef
+{
+	[newRemoteRef retain];
+	[remoteRef release];
+	remoteRef = newRemoteRef;
+}
+
 - (NSDictionary *)attrs
 {
 	NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObjectsAndKeys:

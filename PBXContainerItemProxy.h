@@ -9,13 +9,16 @@
 #import <Cocoa/Cocoa.h>
 #import "XcodeObject.h"
 
+@class PBXProject;
+
 @interface PBXContainerItemProxy : XcodeObject {
-	id containerPortal; //TODO: find out what this is!
+	NSString *containerPortal;
 	NSNumber *proxyType;
 	NSString *remoteGlobalIDString;
 	NSString *remoteInfo;
 }
-@property(retain) id containerPortal;
+-(PBXProject *)containerPortal;
+-(void)setContainerPortal:(NSString *)contPort;
 @property(retain) NSNumber *proxyType;
 @property(retain) NSString *remoteGlobalIDString;
 @property(retain) NSString *remoteInfo;

@@ -20,9 +20,9 @@
 	{
 		[ret addObject:[self.archiver.objectsByArchiveIDs objectForKey:conf]];
 	}
-	return ret;
-	
+	return ret;	
 }
+
 - (NSDictionary *)attrs
 {
 	NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObjectsAndKeys:buildConfigurations, @"buildConfigurations", defaultConfigurationIsVisible, "defaultConfigurationIsVisible", defaultConfigurationName, @"defaultConfigurationName", nil];

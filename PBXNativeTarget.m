@@ -14,7 +14,7 @@
 @implementation PBXNativeTarget
 @synthesize buildPhases;
 @synthesize buildRules;
-@synthesize dependecies;
+@synthesize dependencies;
 @synthesize name;
 @synthesize productInstallPath;
 @synthesize productName;
@@ -56,7 +56,7 @@
 								 buildConfigurationList, @"buildConfigurationList", 
 											 buildPhases, @"buildPhases", 
 											 buildRules, @"buildRules",
-											dependecies, @"dependencies",
+											dependencies, @"dependencies",
 												   name, @"name",
 									 productInstallPath, @"productInstallPath",
 											productName, @"productName",

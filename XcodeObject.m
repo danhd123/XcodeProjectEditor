@@ -65,7 +65,7 @@
 //}
 - (NSDictionary *)attrs
 {
-	return [NSDictionary dictionaryWithObject:[attrs objectForKey:@"isa"] forKey:@"isa"];
+	return [NSDictionary dictionaryWithObject:NSStringFromClass([self class]) forKey:@"isa"];
 //	return [NSDictionary dictionaryWithObjectsAndKeys:archiveID, @"archiveID", version, @"version", nil];
 }
 - (NSDictionary *)hashRepresentation
@@ -80,10 +80,12 @@
 		NSLog(@"%@ not implemented yet. If you see this in release, contact the developer immediately, and include your .pbxproj file.", [anObject objectForKey:@"isa"]);
 		return nil;
 	}
-	NSMutableArray *otherKeys = [NSMutableArray arrayWithArray:[anObject allKeys]];
-	[otherKeys removeObjectIdenticalTo:@"isa"];
+	//historical name; removeObjectIdenticalTo: didn't work.
+	NSArray *otherKeys = [NSMutableArray arrayWithArray:[anObject allKeys]];
 	for (NSString *key in otherKeys)
 	{
+		if ([key isEqualToString:@"isa"])
+			continue;
 		[ret setValue:[anObject objectForKey:key] forKey:key];
 	}
 	return [ret autorelease];

@@ -81,9 +81,10 @@
 	for (id key in keys)
 	{
 		
-		XcodeObject *object = [XcodeObject fromHash:[objects objectForKey:key]];
+		XcodeObject *object = [XcodeObject fromHash:[[projectHash objectForKey:@"objects"] objectForKey:key]];
 		object.version = version;
 		object.archiveID = key;
+		object.archiver = self;
 		[objects setObject:object forKey:key];
 		[objectsByArchiveIDs setObject:object forKey:key];
 	}
