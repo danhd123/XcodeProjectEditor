@@ -15,6 +15,15 @@
 @synthesize outputPaths;
 @synthesize shellPath;
 @synthesize shellScript;
+- (void)dealloc
+{
+	SYRelease(inputPaths);
+	SYRelease(name);
+	SYRelease(outputPaths);
+	SYRelease(shellPath);
+	SYRelease(shellScript);
+	[super dealloc];
+}
 - (NSDictionary *)attrs
 {
 	NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObjectsAndKeys:

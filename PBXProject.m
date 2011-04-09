@@ -18,6 +18,19 @@
 @synthesize projectRoot;
 @synthesize targets;
 @synthesize sourceFileName;
+- (void)dealloc
+{
+	SYRelease(compatibilityVersion);
+	SYRelease(hasScannedForEncodings);
+	SYRelease(projectRoot);
+	SYRelease(projectDirPath);
+	SYRelease(targets);
+	SYRelease(sourceFileName);
+	SYRelease(mainGroup);
+	SYRelease(buildConfigurationList);
+	SYRelease(productRefGroup);
+	[super dealloc];
+}
 - (XCConfigurationList *)buildConfigurationList
 {
 	return [self.archiver.objectsByArchiveIDs objectForKey:buildConfigurationList];

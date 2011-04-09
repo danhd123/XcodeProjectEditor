@@ -12,6 +12,12 @@
 @implementation PBXCopyFilesBuildPhase
 @synthesize dstPath;
 @synthesize dstSubfolderSpec;
+-(void)dealloc
+{
+	SYRelease(dstPath);
+	SYRelease(dstSubfolderSpec);
+	[super dealloc];
+}
 - (NSDictionary *)attrs
 {
 	NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObjectsAndKeys:

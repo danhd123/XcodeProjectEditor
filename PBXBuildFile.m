@@ -11,6 +11,12 @@
 
 @implementation PBXBuildFile
 @synthesize settings;
+- (void)dealloc
+{
+	SYRelease(fileRef);
+	SYRelease(settings);
+	[super dealloc];
+}
 - (PBXFileReference *)fileRef
 {
 	return [self.archiver.objectsByArchiveIDs objectForKey:fileRef];

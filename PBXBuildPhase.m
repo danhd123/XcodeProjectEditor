@@ -14,6 +14,13 @@
 @synthesize buildActionMask;
 @synthesize files;
 @synthesize runOnlyForDeploymentPostprocessing;
+-(void)dealloc
+{
+	SYRelease(buildActionMask);
+	SYRelease(files);
+	SYRelease(runOnlyForDeploymentPostprocessing);
+	[super dealloc];
+}
 - (NSArray *)files
 {
 	NSMutableArray *ret = [NSMutableArray arrayWithCapacity:[files count]];

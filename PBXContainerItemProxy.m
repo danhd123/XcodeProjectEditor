@@ -14,6 +14,14 @@
 @synthesize proxyType;
 @synthesize remoteGlobalIDString;
 @synthesize remoteInfo;
+-(void)dealloc
+{
+	SYRelease(containerPortal);
+	SYRelease(proxyType);
+	SYRelease(remoteInfo);
+	SYRelease(remoteGlobalIDString);
+	[super dealloc];
+}
 -(PBXProject *)containerPortal
 {
 	return [self.archiver.objectsByArchiveIDs objectForKey:containerPortal];

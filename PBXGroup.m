@@ -13,6 +13,13 @@
 @synthesize children;
 @synthesize name;
 @synthesize sourceTree;
+- (void)dealloc
+{
+	SYRelease(children);
+	SYRelease(name);
+	SYRelease(sourceTree);
+	[super dealloc];
+}
 - (NSArray *)children
 {
 	NSMutableArray *ret = [NSMutableArray arrayWithCapacity:[children count]];

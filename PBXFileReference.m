@@ -17,6 +17,17 @@
 @synthesize sourceTree;
 @synthesize explicitFileType;
 @synthesize includeInIndex;
+-(void)dealloc
+{
+	SYRelease(fileEncoding);
+	SYRelease(lastKnownFileType);
+	SYRelease(name);
+	SYRelease(path);
+	SYRelease(sourceTree);
+	SYRelease(explicitFileType);
+	SYRelease(includeInIndex);
+	[super dealloc];
+}
 - (NSDictionary *)attrs
 {
 	NSMutableDictionary *dict = [NSMutableDictionary dictionary];

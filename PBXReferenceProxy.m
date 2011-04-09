@@ -24,7 +24,14 @@
 	[remoteRef release];
 	remoteRef = newRemoteRef;
 }
-
+- (void)dealloc
+{
+	SYRelease(fileType);
+	SYRelease(path);
+	SYRelease(sourceTree);
+	SYRelease(remoteRef);
+	[super dealloc];
+}
 - (NSDictionary *)attrs
 {
 	NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObjectsAndKeys:
