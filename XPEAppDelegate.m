@@ -28,7 +28,10 @@
 	NSString *filePath = [pathBox stringValue];
 	archiver = [[SYXCProjFileUtils loadProjectAt:filePath] retain];
 	project = [[archiver unarchive] retain];
-	[textView setString:[[[project hashRepresentation] description] stringByAppendingString:[[[project targets] valueForKey:@"hashRepresentation"] description]]];
+	NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithDictionary:[project hashRepresentation]];
+	for (id target in [project targets])
+		[dict addEntriesFromDictionary:[target hashRepresentation]];
+	[textView setString:[dict description]];
 }
 - (void)dealloc
 {
