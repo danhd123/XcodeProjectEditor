@@ -25,6 +25,8 @@
 }
 - (IBAction)parse:(id)sender
 {
+	SYRelease(archiver);
+	SYRelease(project);
 	NSString *filePath = [pathBox stringValue];
 	archiver = [[SYXCProjFileUtils loadProjectAt:filePath] retain];
 	project = [[archiver unarchive] retain];
