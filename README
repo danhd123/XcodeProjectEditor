@@ -19,5 +19,5 @@ A: Okay, you got me. If I'd realized NSDictionary could do this, I'd probably
 have just used that instead of trying to port Ruby code. Meh. Still the rest
 definitely needs to be written. 
 
-License: Good question. MIT, I guess.
-©2010 Daniel DeCovnick
+License: MIT.
+©2010-2021 Daniel DeCovnick
