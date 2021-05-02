@@ -21,5 +21,5 @@
 @property(assign) int version;
 @property(assign) SYPBXProjArchiver *archiver;
 @property(retain) id archiveID;
-@property(retain) NSMutableDictionary *attrs;
+@property(nonatomic, retain) NSMutableDictionary *attrs;
 @end

@@ -12,12 +12,6 @@
 @implementation XCBuildConfiguration
 @synthesize buildSettings;
 @synthesize name;
--(void)dealloc
-{
-	SYRelease(buildSettings);
-	SYRelease(name);
-	[super dealloc];
-}
 - (NSDictionary *)attrs
 {
 	NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObjectsAndKeys:

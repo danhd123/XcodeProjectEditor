@@ -32,6 +32,6 @@
 - (void)setProductRefGroup:(NSString *)newGroup;
 @property(retain) NSString *projectDirPath;
 @property(retain) NSString *projectRoot;
-@property(retain) NSArray *targets;
+@property(nonatomic, retain) NSArray *targets;
 @property(retain) NSString *sourceFileName;
 @end

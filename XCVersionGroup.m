@@ -14,14 +14,6 @@
 @synthesize path;
 @synthesize sourceTree;
 @synthesize versionGroupType;
--(void)dealloc
-{
-	SYRelease(children);
-	SYRelease(path);
-	SYRelease(sourceTree);
-	SYRelease(versionGroupType);
-	[super dealloc];
-}
 - (NSDictionary *)attrs
 {
 	NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObjectsAndKeys:

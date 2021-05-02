@@ -24,7 +24,7 @@
 }
 - (XCConfigurationList *)buildConfigurationList;
 - (void)setBuildConfigurationList:(NSString *)newList;
-@property(retain) NSArray *buildPhases;
+@property(nonatomic, retain) NSArray *buildPhases;
 @property(retain) NSArray *buildRules;
 @property(retain) NSArray *dependencies;
 @property(retain) NSString *name;

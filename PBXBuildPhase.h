@@ -16,7 +16,7 @@
 
 }
 @property(retain) NSNumber *buildActionMask;
-@property(retain) NSArray *files;
+@property(nonatomic, retain) NSArray *files;
 @property(retain) NSNumber *runOnlyForDeploymentPostprocessing;
 
 @end

@@ -13,13 +13,6 @@
 @synthesize buildConfigurations;
 @synthesize defaultConfigurationIsVisible;
 @synthesize defaultConfigurationName;
-- (void)dealloc
-{
-	SYRelease(buildConfigurations);
-	SYRelease(defaultConfigurationName);
-	SYRelease(defaultConfigurationIsVisible);
-	[super dealloc];
-}
 - (NSArray *)buildConfigurations
 {
 	NSMutableArray *ret = [NSMutableArray arrayWithCapacity:[buildConfigurations count]];

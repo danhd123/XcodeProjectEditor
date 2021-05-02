@@ -63,12 +63,6 @@
 //{
 //	return [self.attrs allKeys];
 //}
-- (void)dealloc
-{
-	SYRelease(archiveID);
-	SYRelease(attrs);
-	[super dealloc];
-}
 - (NSDictionary *)attrs
 {
 	return [NSDictionary dictionaryWithObject:NSStringFromClass([self class]) forKey:@"isa"];

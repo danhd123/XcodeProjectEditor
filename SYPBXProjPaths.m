@@ -7,7 +7,7 @@
 //
 
 #import "SYPBXProjPaths.h"
-#import "RegexKitLite.h"
+//#import "RegexKitLite.h"
 
 
 @implementation SYPBXProjPaths
@@ -25,7 +25,14 @@
 	{
 		path = [path substringToIndex:[path length]-2];
 	}
-	if (![path isMatchedByRegex:@"\\.xcodeproj$"])
+    NSError *error = nil;
+    NSRegularExpression *xcodeprojRE = [[NSRegularExpression alloc] initWithPattern:@"\\.xcodeproj$" options:0 error:&error];
+    if (error) {
+        NSLog(@"error compiling .xcodeproj$ regex");
+        return nil;
+    }
+    if ([xcodeprojRE numberOfMatchesInString:path options:0 range:NSMakeRange(0, [path length])] == 0)
+//	if (![path isMatchedByRegex:@"\\.xcodeproj$"])
 	{
 		path = [path stringByAppendingString:@".xcodeproj"];
 	}
@@ -33,7 +40,11 @@
 	{
 		return [path stringByAppendingPathComponent:pbxfile];
 	}
-	NSArray *entries = [[NSFileManager defaultManager] directoryContentsAtPath:basePath];
+    NSError *directoryContentsError = nil;
+    NSArray *entries = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:basePath error:&directoryContentsError];
+    if (directoryContentsError) {
+        return nil;
+    }
 	NSMutableArray *existingEntries = [NSMutableArray array];
 	for (NSString *entry in entries)
 	{
@@ -49,11 +60,18 @@
 			continue;
 		}
 		path = [basePath stringByAppendingPathComponent:entry];
-		if ([entry isMatchedByRegex:@"\\.pbxproj$"])
+        NSRegularExpression *pbxprojRE = [[NSRegularExpression alloc] initWithPattern:@"\\.pbxproj$" options:0 error:&error];
+        if (error) {
+            NSLog(@"error compiling .pbxproj$ regex");
+            return nil;
+        }
+        if ([pbxprojRE numberOfMatchesInString:path options:0 range:NSMakeRange(0, [path length])] == 0)
+//		if ([entry isMatchedByRegex:@"\\.pbxproj$"])
 		{
 			return path;
 		}
-		else if ([entry isMatchedByRegex:@"\\.xcodeproj$"])
+        else if ([xcodeprojRE numberOfMatchesInString:path options:0 range:NSMakeRange(0, [path length])])
+//		else if ([entry isMatchedByRegex:@"\\.xcodeproj$"])
 		{
 			return [path stringByAppendingPathComponent:pbxfile];
 		}

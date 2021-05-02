@@ -12,13 +12,6 @@
 
 @implementation PBXTargetDependency
 @synthesize name;
--(void)dealloc
-{
-	SYRelease(name);
-	SYRelease(targetProxy);
-	SYRelease(target);
-	[super dealloc];
-}
 -(PBXContainerItemProxy *)targetProxy
 {
 	return [self.archiver.objectsByArchiveIDs objectForKey:targetProxy];

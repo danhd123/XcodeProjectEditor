@@ -7,11 +7,12 @@
 //
 
 #import "SYPBXProjLexer.h"
-#import "RegexKitLite.h"
+//#import "RegexKitLite.h"
 
 @implementation SYPBXProjLexer
 +(NSArray *)tokenize:(NSString *)source
 {
+#if 0
 	NSString *regexString = @"^\\/\\/ !\\$\\*(.*?)\\*\\$!";
 	//NSRange matchedRange = NSMakeRange(NSNotFound, 0UL);
 	//NSError *error = NULL;
@@ -119,5 +120,7 @@
 		}
 	}
 	return tokens;
+#endif
+    return nil;
 }
 @end

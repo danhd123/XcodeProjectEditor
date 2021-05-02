@@ -26,13 +26,6 @@
 	return self;
 }
 
--(void)dealloc
-{
-	[objectsByArchiveIDs release];
-	objectsByArchiveIDs = nil;
-	SYRelease(projectHash);
-	[super dealloc];
-}
 -(NSString *)archiveIDForObject:(id)object
 {
 	if ([object archiveID] && ![objectsByArchiveIDs objectForKey:[object archiveID]])
@@ -45,7 +38,7 @@
 	{
 		for (int i = 0; i < 24; i+=2)
 		{
-			[arcId appendFormat:@"%02X", random()%256];
+            [arcId appendFormat:@"%02lX", random()%256];
 		}
 		if ([objectsByArchiveIDs objectForKey:arcId])
 			continue;

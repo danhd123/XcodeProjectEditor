@@ -19,19 +19,6 @@
 @synthesize productInstallPath;
 @synthesize productName;
 @synthesize productType;
--(void)dealloc
-{
-	SYRelease(buildRules);
-	SYRelease(buildPhases);
-	SYRelease(dependencies);
-	SYRelease(name);
-	SYRelease(productName);
-	SYRelease(productInstallPath);
-	SYRelease(productType);
-	SYRelease(productReference);
-	SYRelease(buildConfigurationList);
-	[super dealloc];
-}
 - (NSArray *)buildPhases
 {
 	NSMutableArray *ret = [NSMutableArray arrayWithCapacity:[buildPhases count]];

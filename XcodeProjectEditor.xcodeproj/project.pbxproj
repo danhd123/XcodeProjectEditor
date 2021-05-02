@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1666FE841158C02AAC07 /* InfoPlist.strings */; };
 		8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
+		BC3CDC5C26393A2E004229F7 /* SYPBXProjPaths.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9FEE321165D34A00FC8C7E /* SYPBXProjPaths.m */; };
 		BC5A4CA0116B0A9C003B92FA /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BC5A4C9F116B0A9C003B92FA /* libicucore.dylib */; };
 		BC5A4CE1116B2029003B92FA /* XcodeObject.h in Headers */ = {isa = PBXBuildFile; fileRef = BC5A4CDF116B2029003B92FA /* XcodeObject.h */; };
 		BC5A4CE2116B2029003B92FA /* XcodeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5A4CE0116B2029003B92FA /* XcodeObject.m */; };
@@ -64,9 +65,6 @@
 		BC9FEE2F1165D33800FC8C7E /* SYPBXProjEncoder.h in Headers */ = {isa = PBXBuildFile; fileRef = BC9FEE2D1165D33800FC8C7E /* SYPBXProjEncoder.h */; };
 		BC9FEE301165D33800FC8C7E /* SYPBXProjEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9FEE2E1165D33800FC8C7E /* SYPBXProjEncoder.m */; };
 		BC9FEE331165D34A00FC8C7E /* SYPBXProjPaths.h in Headers */ = {isa = PBXBuildFile; fileRef = BC9FEE311165D34A00FC8C7E /* SYPBXProjPaths.h */; };
-		BC9FEE341165D34A00FC8C7E /* SYPBXProjPaths.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9FEE321165D34A00FC8C7E /* SYPBXProjPaths.m */; };
-		BC9FEE371165D7FE00FC8C7E /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9FEE351165D7FE00FC8C7E /* RegexKitLite.m */; };
-		BC9FEE381165D7FE00FC8C7E /* RegexKitLite.h in Headers */ = {isa = PBXBuildFile; fileRef = BC9FEE361165D7FE00FC8C7E /* RegexKitLite.h */; };
 		BCD846261191DA4000D5234C /* SYXCProjFileUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = BCD846241191DA4000D5234C /* SYXCProjFileUtils.h */; };
 		BCD846271191DA4000D5234C /* SYXCProjFileUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD846251191DA4000D5234C /* SYXCProjFileUtils.m */; };
 		BCE642231328E19600DD2F43 /* PBXHeadersBuildPhase.h in Headers */ = {isa = PBXBuildFile; fileRef = BCE642211328E19600DD2F43 /* PBXHeadersBuildPhase.h */; };
@@ -78,7 +76,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8DC2EF4F0486A6940098B216 /* XcodeProjectEditor */;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
 			remoteInfo = XcodeProjectEditor;
 		};
 /* End PBXContainerItemProxy section */
@@ -162,8 +160,6 @@
 		BC9FEE2E1165D33800FC8C7E /* SYPBXProjEncoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYPBXProjEncoder.m; sourceTree = "<group>"; };
 		BC9FEE311165D34A00FC8C7E /* SYPBXProjPaths.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYPBXProjPaths.h; sourceTree = "<group>"; };
 		BC9FEE321165D34A00FC8C7E /* SYPBXProjPaths.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYPBXProjPaths.m; sourceTree = "<group>"; };
-		BC9FEE351165D7FE00FC8C7E /* RegexKitLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegexKitLite.m; sourceTree = "<group>"; };
-		BC9FEE361165D7FE00FC8C7E /* RegexKitLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegexKitLite.h; sourceTree = "<group>"; };
 		BCD846241191DA4000D5234C /* SYXCProjFileUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYXCProjFileUtils.h; sourceTree = "<group>"; };
 		BCD846251191DA4000D5234C /* SYXCProjFileUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYXCProjFileUtils.m; sourceTree = "<group>"; };
 		BCE642211328E19600DD2F43 /* PBXHeadersBuildPhase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBXHeadersBuildPhase.h; sourceTree = "<group>"; };
@@ -210,7 +206,6 @@
 				089C1665FE841158C02AAC07 /* Resources */,
 				0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */,
 				034768DFFF38A50411DB9C8B /* Products */,
-				BC63A936133755B3000DD0DB /* XcodeProjectEditorApp-Info.plist */,
 			);
 			name = XcodeProjectEditor;
 			sourceTree = "<group>";
@@ -227,6 +222,7 @@
 		089C1665FE841158C02AAC07 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				BC63A936133755B3000DD0DB /* XcodeProjectEditorApp-Info.plist */,
 				8DC2EF5A0486A6940098B216 /* Info.plist */,
 				089C1666FE841158C02AAC07 /* InfoPlist.strings */,
 			);
@@ -292,8 +288,6 @@
 		BC5A4C1E116AFE39003B92FA /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				BC9FEE361165D7FE00FC8C7E /* RegexKitLite.h */,
-				BC9FEE351165D7FE00FC8C7E /* RegexKitLite.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -395,7 +389,6 @@
 				BC9FEE2B1165D33000FC8C7E /* SYPBXProjArchiver.h in Headers */,
 				BC9FEE2F1165D33800FC8C7E /* SYPBXProjEncoder.h in Headers */,
 				BC9FEE331165D34A00FC8C7E /* SYPBXProjPaths.h in Headers */,
-				BC9FEE381165D7FE00FC8C7E /* RegexKitLite.h in Headers */,
 				BC5A4CE1116B2029003B92FA /* XcodeObject.h in Headers */,
 				BC5A4CE6116B2056003B92FA /* XCConfigurationList.h in Headers */,
 				BC5A4CEA116B206D003B92FA /* PBXBuildFile.h in Headers */,
@@ -467,9 +460,18 @@
 /* Begin PBXProject section */
 		0867D690FE84028FC02AAC07 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1250;
+			};
 			buildConfigurationList = 1DEB91B108733DA50010E9CD /* Build configuration list for PBXProject "XcodeProjectEditor" */;
 			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = en;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+				Base,
+				English,
+			);
 			mainGroup = 0867D691FE84028FC02AAC07 /* XcodeProjectEditor */;
 			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
 			projectDirPath = "";
@@ -509,8 +511,6 @@
 				BC9FEE281165D31E00FC8C7E /* SYPBXProjParser.m in Sources */,
 				BC9FEE2C1165D33000FC8C7E /* SYPBXProjArchiver.m in Sources */,
 				BC9FEE301165D33800FC8C7E /* SYPBXProjEncoder.m in Sources */,
-				BC9FEE341165D34A00FC8C7E /* SYPBXProjPaths.m in Sources */,
-				BC9FEE371165D7FE00FC8C7E /* RegexKitLite.m in Sources */,
 				BC5A4CE2116B2029003B92FA /* XcodeObject.m in Sources */,
 				BC5A4CE7116B2056003B92FA /* XCConfigurationList.m in Sources */,
 				BC5A4CEB116B206D003B92FA /* PBXBuildFile.m in Sources */,
@@ -526,6 +526,7 @@
 				BC5A4E11116F86FE003B92FA /* PBXResourcesBuildPhase.m in Sources */,
 				BC5A4E15116F8738003B92FA /* PBXSourcesBuildPhase.m in Sources */,
 				BC5A4E19116F8774003B92FA /* PBXVariantGroup.m in Sources */,
+				BC3CDC5C26393A2E004229F7 /* SYPBXProjPaths.m in Sources */,
 				BC5A4E1D116F87A5003B92FA /* XCBuildConfiguration.m in Sources */,
 				BC5A4E351170315B003B92FA /* XCVersionGroup.m in Sources */,
 				BC5A4E5711703312003B92FA /* PBXShellScriptBuildPhase.m in Sources */,
@@ -579,6 +580,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
 				COPY_PHASE_STRIP = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -589,10 +591,12 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = XcodeProjectEditor_Prefix.pch;
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.softyards.XcodeProjectEditor;
 				PRODUCT_NAME = XcodeProjectEditor;
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Debug;
@@ -601,6 +605,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -609,10 +614,12 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = XcodeProjectEditor_Prefix.pch;
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "@loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.softyards.XcodeProjectEditor;
 				PRODUCT_NAME = XcodeProjectEditor;
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Release;

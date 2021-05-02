@@ -13,6 +13,7 @@
 @implementation SYPBXProjParser
 + (NSDictionary *)parse:(NSString *)projectString
 {
+#if 0
 	NSMutableArray *context = [NSMutableArray array];
 	NSArray *tokens = [SYPBXProjLexer tokenize:projectString];
 	//id lastToken = nil;
@@ -85,7 +86,8 @@
 		}
 	}
 	return [[context objectAtIndex:0] objectAtIndex:0]; 
-
+#endif
+    return nil;
 }
 //Just in case, and I can still use the encoder to write out an old-style plist 
 + (NSDictionary *)hashFromFile:(NSString *)filePath

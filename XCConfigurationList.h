@@ -14,7 +14,7 @@
 	NSNumber *defaultConfigurationIsVisible;
 	NSString *defaultConfigurationName;
 }
-@property(retain) NSArray *buildConfigurations;
+@property(nonatomic, retain) NSArray *buildConfigurations;
 @property(retain) NSNumber *defaultConfigurationIsVisible;
 @property(retain) NSString *defaultConfigurationName;
 

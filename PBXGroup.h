@@ -14,7 +14,7 @@
 	NSString *name;
 	NSString *sourceTree;
 }
-@property(retain) NSArray *children;
+@property(nonatomic, retain) NSArray *children;
 @property(retain) NSString *name;
 @property(retain) NSString *sourceTree;
 @end
