@@ -12,10 +12,13 @@
 @class XCConfigurationList, PBXGroup;
 
 @interface PBXProject : XcodeObject
+@property (copy) NSDictionary *attributes;
 - (XCConfigurationList *)buildConfigurationList;
 - (void)setBuildConfigurationList:(NSString *)newList;
 @property(copy) NSString *compatibilityVersion;
+@property(copy) NSString *developmentRegion;
 @property(strong) NSNumber *hasScannedForEncodings;
+@property(copy) NSArray <NSString *> *knownRegions;
 - (PBXGroup *)mainGroup;
 - (void)setMainGroup:(NSString *)newGroup;
 - (PBXGroup *)productRefGroup;

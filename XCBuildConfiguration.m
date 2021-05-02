@@ -7,14 +7,23 @@
 //
 
 #import "XCBuildConfiguration.h"
+#import "SYPBXProjArchiver.h"
 
-
-@implementation XCBuildConfiguration
+@implementation XCBuildConfiguration {
+    NSString *_baseConfigurationReference;
+}
+- (void)setBaseConfigurationReference:(NSString *)baseConfigurationReference {
+    _baseConfigurationReference = baseConfigurationReference;
+}
+- (PBXFileReference *)baseConfigurationReference {
+    return self.archiver.objectsByArchiveIDs[_baseConfigurationReference];
+}
 - (NSDictionary *)attrs
 {
 	NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObjectsAndKeys:
 								 _buildSettings, @"buildSettings",
-								 _name, @"name", nil];
+								 _name, @"name",
+                                 _baseConfigurationReference, @"baseConfigurationReference", nil];
 	[dict addEntriesFromDictionary:[super attrs]];
 	return dict;
 }

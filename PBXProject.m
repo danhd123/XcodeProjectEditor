@@ -52,9 +52,12 @@
 - (NSDictionary *)attrs
 {
 	NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                                             _attributes, @"attributes",
 								 _buildConfigurationList, @"buildConfigurationList", 
 								   _compatibilityVersion, @"compatabilityVersion",
+                                      _developmentRegion, @"developmentRegion",
 								 _hasScannedForEncodings, @"hasScannedForEncodings",
+                                           _knownRegions, @"knownRegions",
 											  _mainGroup, @"mainGroup",
 										 _projectDirPath, @"projectDirPath",
 											_projectRoot, @"projectRoot",

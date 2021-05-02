@@ -41,6 +41,9 @@
 	{
 		[dict setObject:_includeInIndex forKey:@"includeInIndex"];
 	}
+    if (_xcLanguageSpecificationIdentifier) {
+        dict[@"xcLanguageSpecificationIdentifier"] = _xcLanguageSpecificationIdentifier;
+    }
 	[dict addEntriesFromDictionary:[super attrs]];
 	return dict;
 	//this is a somewhat longer implementation, because not all of these have to exist

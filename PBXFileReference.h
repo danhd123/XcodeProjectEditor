@@ -18,4 +18,5 @@
 @property(copy) NSString *sourceTree;
 @property(copy) NSString *explicitFileType;
 @property(strong) NSNumber *includeInIndex;
+@property(copy) NSString *xcLanguageSpecificationIdentifier;
 @end

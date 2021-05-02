@@ -11,14 +11,10 @@
 
 @class PBXContainerItemProxy, PBXNativeTarget;
 
-@interface PBXTargetDependency : XcodeObject {
-	NSString *name;
-	NSString *targetProxy;
-	NSString *target;
-}
-@property(retain) NSString *name;
--(PBXContainerItemProxy *)targetProxy;
--(void)setTargetProxy:(NSString *)tp;
--(PBXNativeTarget *)target;
--(void)setTarget:(NSString *)t;
+@interface PBXTargetDependency : XcodeObject 
+@property(copy) NSString *name;
+- (PBXContainerItemProxy *)targetProxy;
+- (void)setTargetProxy:(NSString *)tp;
+- (PBXNativeTarget *)target;
+- (void)setTarget:(NSString *)t;
 @end

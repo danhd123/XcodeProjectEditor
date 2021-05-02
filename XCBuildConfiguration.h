@@ -9,8 +9,11 @@
 #import <Cocoa/Cocoa.h>
 #import "XcodeObject.h"
 
+@class PBXFileReference;
 
 @interface XCBuildConfiguration : XcodeObject
 @property(copy) NSDictionary *buildSettings;
 @property(copy) NSString *name;
+- (void)setBaseConfigurationReference:(NSString *)baseConfigurationReference;
+- (PBXFileReference *)baseConfigurationReference;
 @end

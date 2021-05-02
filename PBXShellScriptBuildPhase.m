@@ -14,10 +14,13 @@
 {
 	NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObjectsAndKeys:
 								 _inputPaths, @"inputPaths",
+                                 _inputFileListPaths, @"inputFileListPaths",
 								 _name, @"name",
 								 _outputPaths, @"outputPaths",
+                                 _outputFileListPaths, @"outputFileListPaths",
 								 _shellPath, @"shellPath",
-								 _shellScript, @"shellScript", nil];
+								 _shellScript, @"shellScript",
+                                 _showEnvVarsInLog, @"showEnvVarsInLog", nil];
 	[dict addEntriesFromDictionary:[super attrs]];
 	return dict;
 }
