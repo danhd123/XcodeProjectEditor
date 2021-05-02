@@ -11,41 +11,39 @@
 #import "PBXGroup.h"
 #import "SYPBXProjArchiver.h"
 
-@implementation PBXProject
-@synthesize compatibilityVersion;
-@synthesize hasScannedForEncodings;
-@synthesize projectDirPath;
-@synthesize projectRoot;
-@synthesize targets;
-@synthesize sourceFileName;
+@implementation PBXProject {
+    NSString *_buildConfigurationList;
+    NSString *_mainGroup;
+    NSString *_productRefGroup;
+}
 - (XCConfigurationList *)buildConfigurationList
 {
-	return [self.archiver.objectsByArchiveIDs objectForKey:buildConfigurationList];
+	return [self.archiver.objectsByArchiveIDs objectForKey:_buildConfigurationList];
 }
 - (void)setBuildConfigurationList:(NSString *)newList
 {
-	buildConfigurationList = newList;
+	_buildConfigurationList = newList;
 }
 - (PBXGroup *)mainGroup
 {
-	return [self.archiver.objectsByArchiveIDs objectForKey:mainGroup];
+	return [self.archiver.objectsByArchiveIDs objectForKey:_mainGroup];
 }
 - (void)setMainGroup:(NSString *)newGroup
 {
-	mainGroup = newGroup;
+	_mainGroup = newGroup;
 }
 - (PBXGroup *)productRefGroup
 {
-	return [self.archiver.objectsByArchiveIDs objectForKey:productRefGroup];
+	return [self.archiver.objectsByArchiveIDs objectForKey:_productRefGroup];
 }
 - (void)setProductRefGroup:(NSString *)newGroup
 {
-	productRefGroup = newGroup;
+	_productRefGroup = newGroup;
 }
 - (NSArray *)targets
 {
-	NSMutableArray *ret = [NSMutableArray arrayWithCapacity:[targets count]];
-	for (NSString *target in targets)
+	NSMutableArray *ret = [NSMutableArray arrayWithCapacity:[_targets count]];
+	for (NSString *target in _targets)
 	{
 		[ret addObject:[self.archiver.objectsByArchiveIDs objectForKey:target]];
 	}
@@ -54,13 +52,13 @@
 - (NSDictionary *)attrs
 {
 	NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-								 buildConfigurationList, @"buildConfigurationList", 
-								   compatibilityVersion, @"compatabilityVersion", 
-								 hasScannedForEncodings, @"hasScannedForEncodings",
-											  mainGroup, @"mainGroup",
-										 projectDirPath, @"projectDirPath",
-											projectRoot, @"projectRoot",
-												targets, @"targets", nil];
+								 _buildConfigurationList, @"buildConfigurationList", 
+								   _compatibilityVersion, @"compatabilityVersion",
+								 _hasScannedForEncodings, @"hasScannedForEncodings",
+											  _mainGroup, @"mainGroup",
+										 _projectDirPath, @"projectDirPath",
+											_projectRoot, @"projectRoot",
+												_targets, @"targets", nil];
 	[dict addEntriesFromDictionary:[super attrs]];
 	return dict;
 }

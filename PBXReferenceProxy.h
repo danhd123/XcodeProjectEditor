@@ -11,15 +11,10 @@
 
 @class PBXContainerItemProxy;
 
-@interface PBXReferenceProxy : XcodeObject {
-	NSString *fileType;
-	NSString *path;
-	NSString *remoteRef;
-	NSString *sourceTree;
-}
-@property(retain) NSString *fileType;
-@property(retain) NSString *path;
--(PBXContainerItemProxy *)remoteRef;
--(void)setRemoteRef:(NSString *)newRemoteRef;
-@property(retain) NSString *sourceTree;
+@interface PBXReferenceProxy : XcodeObject 
+@property(copy) NSString *fileType;
+@property(copy) NSString *path;
+- (PBXContainerItemProxy *)remoteRef;
+- (void)setRemoteRef:(NSString *)newRemoteRef;
+@property(copy) NSString *sourceTree;
 @end

@@ -9,14 +9,9 @@
 #import <Cocoa/Cocoa.h>
 #import "XcodeObject.h"
 
-@interface PBXBuildPhase : XcodeObject {
-	NSNumber *buildActionMask;
-	NSArray *files; //PBXBuildFiles
-	NSNumber *runOnlyForDeploymentPostprocessing;
-
-}
-@property(retain) NSNumber *buildActionMask;
-@property(nonatomic, retain) NSArray *files;
-@property(retain) NSNumber *runOnlyForDeploymentPostprocessing;
+@interface PBXBuildPhase : XcodeObject
+@property(strong) NSNumber *buildActionMask;
+@property(nonatomic, copy) NSArray *files;
+@property(strong) NSNumber *runOnlyForDeploymentPostprocessing; // these should really probably be scalars.
 
 @end

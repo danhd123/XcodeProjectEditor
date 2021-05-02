@@ -10,10 +10,7 @@
 #import "XcodeObject.h"
 
 
-@interface XCBuildConfiguration : XcodeObject {
-	NSDictionary *buildSettings;
-	NSString *name;
-}
-@property(strong) NSDictionary *buildSettings;
-@property(strong) NSString *name;
+@interface XCBuildConfiguration : XcodeObject
+@property(copy) NSDictionary *buildSettings;
+@property(copy) NSString *name;
 @end

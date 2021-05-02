@@ -15,7 +15,7 @@
 static SYXCProjFileUtils *sSharedUtils;
 
 @implementation SYXCProjFileUtils
-+(id)sharedUtils
++ (id)sharedUtils
 {
 	if (sSharedUtils == nil)
 	{
@@ -23,7 +23,7 @@ static SYXCProjFileUtils *sSharedUtils;
 	}
 	return sSharedUtils;
 }
-- (id) init
+- (id)init
 {
 	if (sSharedUtils)
 		return sSharedUtils;
@@ -34,7 +34,7 @@ static SYXCProjFileUtils *sSharedUtils;
 	return self;
 }
 
-+(SYPBXProjArchiver *)loadProjectAt:(NSString *)path
++ (SYPBXProjArchiver *)loadProjectAt:(NSString *)path
 {
 	NSString *file = [SYPBXProjPaths projectFileAt:path];
 	SYPBXProjArchiver *projectArchiver = [SYPBXProjArchiver newUnarchiverWithFile:file];
@@ -43,7 +43,7 @@ static SYXCProjFileUtils *sSharedUtils;
 	//Client code should call these methods; own the archiver. 
 	return projectArchiver;
 }
-+(void)dumpProjectArchiver:(SYPBXProjArchiver *)project atPath:(NSString *)path
++ (void)dumpProjectArchiver:(SYPBXProjArchiver *)project atPath:(NSString *)path
 {
 	NSString *file = [SYPBXProjPaths projectFileAt:path];
 	NSDictionary *contents = [project archiveToHash];

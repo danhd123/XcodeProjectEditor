@@ -13,13 +13,12 @@
 @interface XcodeObject : NSObject {
 	int version;
 	id archiveID;
-	NSMutableDictionary *attrs;
 	SYPBXProjArchiver *archiver;
 }
-+(id)fromHash:(NSDictionary *)anObject;
--(NSDictionary *)hashRepresentation;
++ (id)fromHash:(NSDictionary *)anObject;
+- (NSDictionary *)hashRepresentation;
 @property(assign) int version;
-@property(retain) SYPBXProjArchiver *archiver;
-@property(retain) id archiveID;
+@property(strong) SYPBXProjArchiver *archiver;
+@property(strong) id archiveID;
 @property(nonatomic, retain) NSMutableDictionary *attrs;
 @end

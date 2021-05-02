@@ -9,14 +9,9 @@
 #import <Cocoa/Cocoa.h>
 #import "XcodeObject.h"
 
-@interface XCVersionGroup : XcodeObject {
-	NSArray *children;
-	NSString *path;
-	NSString *sourceTree;
-	NSString *versionGroupType;
-}
-@property(retain) NSArray *children;
-@property(retain) NSString *path;
-@property(retain) NSString *sourceTree;
-@property(retain) NSString *versionGroupType;
+@interface XCVersionGroup : XcodeObject
+@property(copy) NSArray *children;
+@property(copy) NSString *path;
+@property(copy) NSString *sourceTree;
+@property(copy) NSString *versionGroupType;
 @end

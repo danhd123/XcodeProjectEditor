@@ -11,26 +11,16 @@
 
 @class XCConfigurationList, PBXFileReference;
 
-@interface PBXNativeTarget : XcodeObject {
-	NSString *buildConfigurationList;
-	NSArray *buildPhases;
-	NSArray *buildRules;
-	NSArray *dependencies;
-	NSString *name;
-	NSString *productInstallPath;
-	NSString *productName;
-	NSString *productReference;
-	NSString *productType;
-}
+@interface PBXNativeTarget : XcodeObject 
 - (XCConfigurationList *)buildConfigurationList;
 - (void)setBuildConfigurationList:(NSString *)newList;
-@property(nonatomic, retain) NSArray *buildPhases;
-@property(retain) NSArray *buildRules;
-@property(retain) NSArray *dependencies;
-@property(retain) NSString *name;
-@property(retain) NSString *productInstallPath;
-@property(retain) NSString *productName;
+@property(nonatomic, copy) NSArray *buildPhases;
+@property(copy) NSArray *buildRules;
+@property(copy) NSArray *dependencies;
+@property(copy) NSString *name;
+@property(copy) NSString *productInstallPath;
+@property(copy) NSString *productName;
 - (PBXFileReference *)productReference;
 - (void)setProductReference:(NSString *)newReference;
-@property(retain) NSString *productType;
+@property(copy) NSString *productType;
 @end

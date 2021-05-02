@@ -10,8 +10,6 @@
 #import "PBXGroup.h"
 
 
-@interface PBXVariantGroup : PBXGroup {
-
-}
+@interface PBXVariantGroup : PBXGroup 
 
 @end

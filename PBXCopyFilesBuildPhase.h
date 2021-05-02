@@ -10,10 +10,8 @@
 #import "PBXBuildPhase.h"
 
 
-@interface PBXCopyFilesBuildPhase : PBXBuildPhase {
-	NSString *dstPath;
-	NSNumber *dstSubfolderSpec;
-}
-@property(retain) NSString *dstPath;
-@property(retain) NSNumber *dstSubfolderSpec;
+@interface PBXCopyFilesBuildPhase : PBXBuildPhase
+@property(copy) NSString *dstPath;
+@property(strong) NSNumber *dstSubfolderSpec;
+@property(copy) NSString *name;
 @end

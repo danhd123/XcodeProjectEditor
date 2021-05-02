@@ -10,25 +10,24 @@
 #import "SYPBXProjArchiver.h"
 
 
-@implementation PBXReferenceProxy
-@synthesize fileType;
-@synthesize path;
-@synthesize sourceTree;
--(PBXContainerItemProxy *)remoteRef
-{
-	return [self.archiver.objectsByArchiveIDs objectForKey:remoteRef];
+@implementation PBXReferenceProxy {
+    NSString *_remoteRef;
 }
--(void)setRemoteRef:(NSString *)newRemoteRef
+- (PBXContainerItemProxy *)remoteRef
 {
-	remoteRef = newRemoteRef;
+	return [self.archiver.objectsByArchiveIDs objectForKey:_remoteRef];
+}
+- (void)setRemoteRef:(NSString *)newRemoteRef
+{
+	_remoteRef = newRemoteRef;
 }
 - (NSDictionary *)attrs
 {
 	NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-								 fileType, @"fileType",
-								 path, @"path", 
-								 remoteRef, @"remoteRef",
-								 sourceTree, @"sourceTree", nil];
+								 _fileType, @"fileType",
+								 _path, @"path",
+								 _remoteRef, @"remoteRef",
+								 _sourceTree, @"sourceTree", nil];
 	[dict addEntriesFromDictionary:[super attrs]];
 	return dict;
 }

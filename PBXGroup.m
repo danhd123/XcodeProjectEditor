@@ -10,13 +10,10 @@
 #import "SYPBXProjArchiver.h"
 
 @implementation PBXGroup
-@synthesize children;
-@synthesize name;
-@synthesize sourceTree;
 - (NSArray *)children
 {
-	NSMutableArray *ret = [NSMutableArray arrayWithCapacity:[children count]];
-	for (NSString *child in children)
+	NSMutableArray *ret = [NSMutableArray arrayWithCapacity:[_children count]];
+	for (NSString *child in _children)
 	{
 		[ret addObject:[self.archiver.objectsByArchiveIDs objectForKey:child]];
 	}
@@ -25,9 +22,10 @@
 - (NSDictionary *)attrs
 {
 	NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-								   children, @"children",
-									   name, @"name",
-								 sourceTree, @"sourceTree", nil];
+								   _children, @"children",
+									   _name, @"name",
+								 _sourceTree, @"sourceTree",
+                                  self.path, @"path", nil];
 	[dict addEntriesFromDictionary:[super attrs]];
 	return dict;
 }

@@ -10,28 +10,30 @@
 #import "PBXContainerItemProxy.h"
 #import "SYPBXProjArchiver.h"
 
-@implementation PBXTargetDependency
-@synthesize name;
+@implementation PBXTargetDependency {
+    NSString *_targetProxy;
+    NSString *_target;
+}
 -(PBXContainerItemProxy *)targetProxy
 {
-	return [self.archiver.objectsByArchiveIDs objectForKey:targetProxy];
+	return [self.archiver.objectsByArchiveIDs objectForKey:_targetProxy];
 }
 -(void)setTargetProxy:(NSString *)tp
 {
-	targetProxy = tp;
+	_targetProxy = tp;
 }
 -(PBXNativeTarget *)target
 {
-	return [self.archiver.objectsByArchiveIDs objectForKey:target];
+	return [self.archiver.objectsByArchiveIDs objectForKey:_target];
 }
 -(void)setTarget:(NSString *)t
 {
-	target = t;
+	_target = t;
 }
 
 -(NSDictionary *)attrs
 {
-	NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObjectsAndKeys:name, @"name", targetProxy, @"targetProxy", nil];
+	NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObjectsAndKeys:_name, @"name", _targetProxy, @"targetProxy", nil];
 	[dict addEntriesFromDictionary:[super attrs]];
 	return dict;
 }

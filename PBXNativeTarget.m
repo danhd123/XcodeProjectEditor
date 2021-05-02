@@ -11,18 +11,14 @@
 #import "PBXFileReference.h"
 #import "SYPBXProjArchiver.h"
 
-@implementation PBXNativeTarget
-@synthesize buildPhases;
-@synthesize buildRules;
-@synthesize dependencies;
-@synthesize name;
-@synthesize productInstallPath;
-@synthesize productName;
-@synthesize productType;
+@implementation PBXNativeTarget {
+    NSString *_buildConfigurationList;
+    NSString *_productReference;
+}
 - (NSArray *)buildPhases
 {
-	NSMutableArray *ret = [NSMutableArray arrayWithCapacity:[buildPhases count]];
-	for (NSString *phase in buildPhases)
+	NSMutableArray *ret = [NSMutableArray arrayWithCapacity:[_buildPhases count]];
+	for (NSString *phase in _buildPhases)
 	{
 		[ret addObject:[self.archiver.objectsByArchiveIDs objectForKey:phase]];
 	}
@@ -30,34 +26,34 @@
 }
 - (PBXFileReference *)productReference
 {
-	return [self.archiver.objectsByArchiveIDs objectForKey:productReference];
+	return [self.archiver.objectsByArchiveIDs objectForKey:_productReference];
 }
 - (void)setProductReference:(NSString *)newReference
 {
-	newReference = productReference;
+	_productReference = newReference;
 }
 //TODO: check if I need to do the same with Build Rules and Dependencies
 // probably (I don't see a PBXBuildRule though)
 - (XCConfigurationList *)buildConfigurationList
 {
-	return [self.archiver.objectsByArchiveIDs objectForKey:buildConfigurationList];
+	return [self.archiver.objectsByArchiveIDs objectForKey:_buildConfigurationList];
 }
 - (void)setBuildConfigurationList:(NSString *)newList
 {
-	buildConfigurationList = newList;
+	_buildConfigurationList = newList;
 }
 -(NSDictionary *)attrs
 {
 	NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-								 buildConfigurationList, @"buildConfigurationList", 
-											 buildPhases, @"buildPhases", 
-											 buildRules, @"buildRules",
-											dependencies, @"dependencies",
-												   name, @"name",
-									 productInstallPath, @"productInstallPath",
-											productName, @"productName",
-									   productReference, @"productReference",
-											productType, @"productType", nil];
+                                _buildConfigurationList, @"buildConfigurationList",
+                                           _buildPhases, @"buildPhases",
+                                            _buildRules, @"buildRules",
+                                          _dependencies, @"dependencies",
+                                                  _name, @"name",
+                                    _productInstallPath, @"productInstallPath",
+                                           _productName, @"productName",
+                                      _productReference, @"productReference",
+                                           _productType, @"productType", nil];
 	[dict addEntriesFromDictionary:[super attrs]];
 	return dict;
 }

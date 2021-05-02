@@ -11,27 +11,17 @@
 
 @class XCConfigurationList, PBXGroup;
 
-@interface PBXProject : XcodeObject {
-	NSString *buildConfigurationList;
-	NSString *compatibilityVersion;
-	NSNumber *hasScannedForEncodings;
-	NSString *mainGroup;
-	NSString *productRefGroup;
-	NSString *projectDirPath;
-	NSString *projectRoot;
-	NSArray *targets;
-	NSString *sourceFileName;
-}
+@interface PBXProject : XcodeObject
 - (XCConfigurationList *)buildConfigurationList;
 - (void)setBuildConfigurationList:(NSString *)newList;
-@property(retain) NSString *compatibilityVersion;
-@property(retain) NSNumber *hasScannedForEncodings;
+@property(copy) NSString *compatibilityVersion;
+@property(strong) NSNumber *hasScannedForEncodings;
 - (PBXGroup *)mainGroup;
 - (void)setMainGroup:(NSString *)newGroup;
 - (PBXGroup *)productRefGroup;
 - (void)setProductRefGroup:(NSString *)newGroup;
-@property(retain) NSString *projectDirPath;
-@property(retain) NSString *projectRoot;
-@property(nonatomic, retain) NSArray *targets;
-@property(retain) NSString *sourceFileName;
+@property(copy) NSString *projectDirPath;
+@property(copy) NSString *projectRoot;
+@property(nonatomic, copy) NSArray *targets;
+@property(copy) NSString *sourceFileName;
 @end

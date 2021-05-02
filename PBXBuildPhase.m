@@ -11,13 +11,10 @@
 
 
 @implementation PBXBuildPhase
-@synthesize buildActionMask;
-@synthesize files;
-@synthesize runOnlyForDeploymentPostprocessing;
 - (NSArray *)files
 {
-	NSMutableArray *ret = [NSMutableArray arrayWithCapacity:[files count]];
-	for (NSString *file in files)
+	NSMutableArray *ret = [NSMutableArray arrayWithCapacity:[_files count]];
+	for (NSString *file in _files)
 	{
 		[ret addObject:[self.archiver.objectsByArchiveIDs objectForKey:file]];
 	}
@@ -26,9 +23,9 @@
 - (NSDictionary *)attrs
 {
 	NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-								 buildActionMask, @"buildActionMask",
-								 files, @"files",
-								 runOnlyForDeploymentPostprocessing, @"runOnlyForDeploymentPostprocessing", nil];
+								 _buildActionMask, @"buildActionMask",
+								 _files, @"files",
+								 _runOnlyForDeploymentPostprocessing, @"runOnlyForDeploymentPostprocessing", nil];
 	[dict addEntriesFromDictionary:[super attrs]];
 	return dict;
 }

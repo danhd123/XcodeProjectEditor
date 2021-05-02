@@ -9,12 +9,9 @@
 #import <Cocoa/Cocoa.h>
 #import "XcodeObject.h"
 
-@interface PBXGroup : XcodeObject {
-	NSArray *children;
-	NSString *name;
-	NSString *sourceTree;
-}
-@property(nonatomic, retain) NSArray *children;
-@property(retain) NSString *name;
-@property(retain) NSString *sourceTree;
+@interface PBXGroup : XcodeObject
+@property(nonatomic, copy) NSArray *children;
+@property(copy) NSString *name;
+@property(copy) NSString *sourceTree;
+@property(copy) NSString *path;
 @end

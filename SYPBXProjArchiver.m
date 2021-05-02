@@ -12,25 +12,31 @@
 #import "XcodeObject.h"
 #import "PBXProject.h"
 
-@implementation SYPBXProjArchiver
-@synthesize objectsByArchiveIDs;
+//@interface SYPBXProjParser ()
+//@property
+//@end
+
+@implementation SYPBXProjArchiver {
+    NSMutableDictionary *_objectsByArchiveIDs;
+    NSDictionary *_projectHash;
+}
 -(id)initWithHash:(NSDictionary *)hash
 {
 	self = [super init];
 	if (self)
 	{
-		objectsByArchiveIDs = [[NSMutableDictionary alloc] init];
+		_objectsByArchiveIDs = [[NSMutableDictionary alloc] init];
 		srandom(time(0));
-		projectHash = hash;
+		_projectHash = hash;
 	}
 	return self;
 }
 
 -(NSString *)archiveIDForObject:(id)object
 {
-	if ([object archiveID] && ![objectsByArchiveIDs objectForKey:[object archiveID]])
+	if ([object archiveID] && ![self.objectsByArchiveIDs objectForKey:[object archiveID]])
 	{
-		[objectsByArchiveIDs setObject:object forKey:[object archiveID]];
+		[_objectsByArchiveIDs setObject:object forKey:[object archiveID]];
 		return [object archiveID];
 	}
 	NSMutableString *arcId = [NSMutableString stringWithCapacity:24];
@@ -40,10 +46,10 @@
 		{
             [arcId appendFormat:@"%02lX", random()%256];
 		}
-		if ([objectsByArchiveIDs objectForKey:arcId])
+		if ([self.objectsByArchiveIDs objectForKey:arcId])
 			continue;
 		[object setArchiveID:arcId];
-		[objectsByArchiveIDs setObject:object forKey:arcId];
+		[_objectsByArchiveIDs setObject:object forKey:arcId];
 		return arcId;
 	}
 }
@@ -58,33 +64,33 @@
 }
 - (PBXProject *)unarchive
 {
-	if (![[projectHash objectForKey:@"archiveVersion"] isEqualToString:@"1"])
+	if (![[_projectHash objectForKey:@"archiveVersion"] isEqualToString:@"1"])
 	{
 		NSLog(@"Unknown archive version.");
 		return nil;
 	}
-	if ([[projectHash objectForKey:@"classes"] count] != 0)
+	if ([[_projectHash objectForKey:@"classes"] count] != 0)
 	{
 		NSLog(@"classes not implemented");
 		return nil;
 	}
-	int version = [[projectHash objectForKey:@"archiveVersion"] intValue];
+	int version = [[_projectHash objectForKey:@"archiveVersion"] intValue];
 	NSMutableDictionary *objects = [NSMutableDictionary dictionary];
-	NSArray *keys = [[projectHash objectForKey:@"objects"] allKeys];
+	NSArray *keys = [[_projectHash objectForKey:@"objects"] allKeys];
 	for (id key in keys)
 	{
 		
-		XcodeObject *object = [XcodeObject fromHash:[[projectHash objectForKey:@"objects"] objectForKey:key]];
+		XcodeObject *object = [XcodeObject fromHash:[[_projectHash objectForKey:@"objects"] objectForKey:key]];
 		object.version = version;
 		object.archiveID = key;
 		object.archiver = self;
 		[objects setObject:object forKey:key];
-		[objectsByArchiveIDs setObject:object forKey:key];
+        [_objectsByArchiveIDs setObject:object forKey:key];
 	}
 	keys = [objects allKeys];
 	//More stuff that's unnecessary in ObjC
 	//just ommitting it this time rather than writing and commenting it out. 
-	return [objects objectForKey:[projectHash objectForKey:@"rootObject"]];
+	return [objects objectForKey:[_projectHash objectForKey:@"rootObject"]];
 	
 }
 + (PBXProject *)unarchiveHash:(NSDictionary *)hash
@@ -119,10 +125,10 @@
 {
 	NSMutableDictionary *ret = [NSMutableDictionary dictionaryWithObject:@"1" forKey:@"archiveVersion"];
 	[ret setObject:[NSDictionary dictionary] forKey:@"classes"];
-	NSMutableDictionary *objects = [NSMutableDictionary dictionaryWithCapacity:[objectsByArchiveIDs count]];
-	for (NSString *key in objectsByArchiveIDs)
+	NSMutableDictionary *objects = [NSMutableDictionary dictionaryWithCapacity:[_objectsByArchiveIDs count]];
+	for (NSString *key in _objectsByArchiveIDs)
 	{
-		[objects setObject:[[objectsByArchiveIDs objectForKey:key] attrs] forKey:key];
+		[objects setObject:[[_objectsByArchiveIDs objectForKey:key] attrs] forKey:key];
 	}
 	[ret setObject:objects forKey:@"objects"];
 	return ret;

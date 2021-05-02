@@ -10,13 +10,11 @@
 
 
 @implementation PBXCopyFilesBuildPhase
-@synthesize dstPath;
-@synthesize dstSubfolderSpec;
 - (NSDictionary *)attrs
 {
 	NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-								 dstPath, @"dstPath",
-								 dstSubfolderSpec, @"dstSubfolderSpec", nil];
+								 _dstPath, @"dstPath",
+								 _dstSubfolderSpec, @"dstSubfolderSpec", nil];
 	[dict addEntriesFromDictionary:[super attrs]];
 	return dict;
 }

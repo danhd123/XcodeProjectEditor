@@ -9,8 +9,6 @@
 #import <Cocoa/Cocoa.h>
 #import "PBXBuildPhase.h"
 
-@interface PBXSourcesBuildPhase : PBXBuildPhase {
-
-}
+@interface PBXSourcesBuildPhase : PBXBuildPhase 
 
 @end

@@ -10,13 +10,10 @@
 #import "SYPBXProjArchiver.h"
 
 @implementation XCConfigurationList
-@synthesize buildConfigurations;
-@synthesize defaultConfigurationIsVisible;
-@synthesize defaultConfigurationName;
 - (NSArray *)buildConfigurations
 {
-	NSMutableArray *ret = [NSMutableArray arrayWithCapacity:[buildConfigurations count]];
-	for (NSString *conf in buildConfigurations)
+	NSMutableArray *ret = [NSMutableArray arrayWithCapacity:[_buildConfigurations count]];
+	for (NSString *conf in _buildConfigurations)
 	{
 		[ret addObject:[self.archiver.objectsByArchiveIDs objectForKey:conf]];
 	}
@@ -25,7 +22,7 @@
 
 - (NSDictionary *)attrs
 {
-	NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObjectsAndKeys:buildConfigurations, @"buildConfigurations", defaultConfigurationIsVisible, "defaultConfigurationIsVisible", defaultConfigurationName, @"defaultConfigurationName", nil];
+	NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObjectsAndKeys:_buildConfigurations, @"buildConfigurations", _defaultConfigurationIsVisible, "defaultConfigurationIsVisible", _defaultConfigurationName, @"defaultConfigurationName", nil];
 	[dict addEntriesFromDictionary:[super attrs]];
 	return dict;
 }

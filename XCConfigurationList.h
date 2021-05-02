@@ -9,13 +9,11 @@
 #import <Cocoa/Cocoa.h>
 #import "XcodeObject.h"
 
-@interface XCConfigurationList : XcodeObject {
-	NSArray *buildConfigurations; //of type XCBuildConfiguration
-	NSNumber *defaultConfigurationIsVisible;
-	NSString *defaultConfigurationName;
-}
-@property(nonatomic, retain) NSArray *buildConfigurations;
-@property(retain) NSNumber *defaultConfigurationIsVisible;
-@property(retain) NSString *defaultConfigurationName;
+@class XCBuildConfiguration;
+
+@interface XCConfigurationList : XcodeObject
+@property(nonatomic, copy) NSArray <XCBuildConfiguration *> *buildConfigurations;
+@property(strong) NSNumber *defaultConfigurationIsVisible;
+@property(copy) NSString *defaultConfigurationName;
 
 @end

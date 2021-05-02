@@ -9,16 +9,10 @@
 #import <Cocoa/Cocoa.h>
 #import "PBXBuildPhase.h"
 
-@interface PBXShellScriptBuildPhase : PBXBuildPhase {
-	NSArray *inputPaths;
-	NSString *name;
-	NSArray *outputPaths;
-	NSString *shellPath;
-	NSString *shellScript;
-}
-@property(retain) NSArray *inputPaths;
-@property(retain) NSString *name;
-@property(retain) NSArray *outputPaths;
-@property(retain) NSString *shellPath;
-@property(retain) NSString *shellScript;
+@interface PBXShellScriptBuildPhase : PBXBuildPhase
+@property(copy) NSArray *inputPaths;
+@property(copy) NSString *name;
+@property(copy) NSArray *outputPaths;
+@property(copy) NSString *shellPath;
+@property(copy) NSString *shellScript;
 @end

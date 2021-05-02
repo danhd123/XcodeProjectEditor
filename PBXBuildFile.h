@@ -11,11 +11,8 @@
 
 @class PBXFileReference;
 
-@interface PBXBuildFile : XcodeObject {
-	NSString *fileRef;
-	NSMutableDictionary *settings;
-}
+@interface PBXBuildFile : XcodeObject
 -(PBXFileReference *)fileRef;
 -(void)setFileRef:(NSString *)newRef;
-@property(retain) NSMutableDictionary *settings;
+@property(strong) NSMutableDictionary *settings;
 @end

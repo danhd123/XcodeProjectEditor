@@ -232,7 +232,6 @@
 		08FB77AEFE84172EC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				BC5A4C1E116AFE39003B92FA /* Utils */,
 				BC5A4C1D116AFE1F003B92FA /* File */,
 				BC5A4CE3116B202C003B92FA /* Objects */,
 			);
@@ -283,13 +282,6 @@
 				BCD846251191DA4000D5234C /* SYXCProjFileUtils.m */,
 			);
 			name = File;
-			sourceTree = "<group>";
-		};
-		BC5A4C1E116AFE39003B92FA /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Utils;
 			sourceTree = "<group>";
 		};
 		BC5A4CE3116B202C003B92FA /* Objects */ = {
@@ -658,6 +650,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
@@ -684,6 +677,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;

@@ -13,7 +13,7 @@
 @class SYPBXProjArchiver;
 
 @interface SYXCProjFileUtils : NSObject {}
-+(SYPBXProjArchiver *)loadProjectAt:(NSString *)path;
-+(void)dumpProjectArchiver:(SYPBXProjArchiver *)project atPath:(NSString *)path;
++ (SYPBXProjArchiver *)loadProjectAt:(NSString *)path;
++ (void)dumpProjectArchiver:(SYPBXProjArchiver *)project atPath:(NSString *)path;
 
 @end

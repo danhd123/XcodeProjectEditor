@@ -11,11 +11,8 @@
 @class PBXProject;
 
 
-@interface SYPBXProjArchiver : NSObject {
-	NSMutableDictionary *objectsByArchiveIDs;
-	NSDictionary *projectHash;
-}
-@property (readonly, retain) NSDictionary *objectsByArchiveIDs;
+@interface SYPBXProjArchiver : NSObject 
+@property (readonly, copy) NSDictionary *objectsByArchiveIDs;
 + (SYPBXProjArchiver *)newUnarchiverWithFile:(NSString *)filePath;
 - (PBXProject *)unarchive;
 + (PBXProject *)unarchiveHash:(NSDictionary *)hash;

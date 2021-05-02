@@ -28,17 +28,11 @@
     archiver = nil;
     project = nil;
 	NSString *filePath = [pathBox stringValue];
-	archiver = [[SYXCProjFileUtils loadProjectAt:filePath] retain];
-	project = [[archiver unarchive] retain];
+	archiver = [SYXCProjFileUtils loadProjectAt:filePath];
+	project = [archiver unarchive];
 	NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithDictionary:[project hashRepresentation]];
 	for (id target in [project targets])
 		[dict addEntriesFromDictionary:[target hashRepresentation]];
 	[textView setString:[dict description]];
-}
-- (void)dealloc
-{
-	[archiver release];
-	[project release];
-	[super dealloc];
 }
 @end

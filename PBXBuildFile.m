@@ -9,21 +9,22 @@
 #import "PBXBuildFile.h"
 #import "SYPBXProjArchiver.h"
 
-@implementation PBXBuildFile
-@synthesize settings;
+@implementation PBXBuildFile {
+    NSString *_fileRef;
+}
 - (PBXFileReference *)fileRef
 {
-	return [self.archiver.objectsByArchiveIDs objectForKey:fileRef];
+	return [self.archiver.objectsByArchiveIDs objectForKey:_fileRef];
 }
 - (void)setFileRef:(NSString *)newRef
 {
-	fileRef = newRef;
+	_fileRef = newRef;
 }
 - (NSDictionary *)attrs
 {
 	NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-								 fileRef, @"fileRef",
-								 settings, @"settings", nil];
+								 _fileRef, @"fileRef",
+								 _settings, @"settings", nil];
 	[dict addEntriesFromDictionary:[super attrs]];
 	return dict;
 }

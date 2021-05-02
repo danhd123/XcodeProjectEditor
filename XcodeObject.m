@@ -19,7 +19,6 @@
 @synthesize archiver;
 @synthesize archiveID;
 @synthesize version;
-@synthesize attrs;
 //-(id)objectForKey:(id)aKey
 //{
 //	return [attrs objectForKey:aKey];
@@ -33,13 +32,13 @@
 	self = [super init];
 	if (self)
 	{
-		self.attrs = [hash mutableCopy] ;
+		_attrs = [hash mutableCopy] ;
 		if (![self isMemberOfClass:[XcodeObject class]])
 		{
 			NSString *class_name = [self className];
-			if ([attrs objectForKey:@"isa"] == nil)
+			if ([_attrs objectForKey:@"isa"] == nil)
 			{
-				[attrs setObject:class_name forKey:@"isa"];
+				[_attrs setObject:class_name forKey:@"isa"];
 			}
 		}
 	}

@@ -10,46 +10,40 @@
 
 
 @implementation PBXFileReference
-@synthesize fileEncoding;
-@synthesize lastKnownFileType;
-@synthesize name;
-@synthesize path;
-@synthesize sourceTree;
-@synthesize explicitFileType;
-@synthesize includeInIndex;
 - (NSDictionary *)attrs
 {
 	NSMutableDictionary *dict = [NSMutableDictionary dictionary];
-	if (fileEncoding)
+	if (_fileEncoding)
 	{
-		[dict setObject:fileEncoding forKey:@"fileEncoding"];
+		[dict setObject:_fileEncoding forKey:@"fileEncoding"];
 	}
-	if (lastKnownFileType)
+	if (_lastKnownFileType)
 	{
-		[dict setObject:lastKnownFileType forKey:@"lastKnownFileType"];
+		[dict setObject:_lastKnownFileType forKey:@"lastKnownFileType"];
 	}
-	if (name)
+	if (_name)
 	{
-		[dict setObject:name forKey:@"name"];
+		[dict setObject:_name forKey:@"name"];
 	}
-	if (path)
+	if (_path)
 	{
-		[dict setObject:path forKey:@"path"];
+		[dict setObject:_path forKey:@"path"];
 	}
-	if (sourceTree)
+	if (_sourceTree)
 	{
-		[dict setObject:sourceTree forKey:@"sourceTree"];
+		[dict setObject:_sourceTree forKey:@"sourceTree"];
 	}
-	if (explicitFileType)
+	if (_explicitFileType)
 	{
-		[dict setObject:explicitFileType forKey:@"explicitFileType"];
+		[dict setObject:_explicitFileType forKey:@"explicitFileType"];
 	}
-	if (includeInIndex)
+	if (_includeInIndex)
 	{
-		[dict setObject:includeInIndex forKey:@"includeInIndex"];
+		[dict setObject:_includeInIndex forKey:@"includeInIndex"];
 	}
 	[dict addEntriesFromDictionary:[super attrs]];
 	return dict;
 	//this is a somewhat longer implementation, because not all of these have to exist
+    //this seems likely to be the case at some point... should probably do that for all classes.
 }
 @end

@@ -10,17 +10,13 @@
 
 
 @implementation XCVersionGroup
-@synthesize children; //TODO: check if children needs to be expanded - get a pbxproj with one of these!
-@synthesize path;
-@synthesize sourceTree;
-@synthesize versionGroupType;
 - (NSDictionary *)attrs
 {
 	NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-								 children, @"children",
-								 path, @"path",
-								 sourceTree, @"sourceTree",
-								 versionGroupType, @"versionGroupType", nil];
+								 _children, @"children",
+								 _path, @"path",
+								 _sourceTree, @"sourceTree",
+								 _versionGroupType, @"versionGroupType", nil];
 	[dict addEntriesFromDictionary:[super attrs]];
 	return dict;
 }

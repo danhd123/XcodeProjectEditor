@@ -11,15 +11,10 @@
 
 @class PBXProject;
 
-@interface PBXContainerItemProxy : XcodeObject {
-	NSString *containerPortal;
-	NSNumber *proxyType;
-	NSString *remoteGlobalIDString;
-	NSString *remoteInfo;
-}
+@interface PBXContainerItemProxy : XcodeObject
 -(PBXProject *)containerPortal;
 -(void)setContainerPortal:(NSString *)contPort;
-@property(retain) NSNumber *proxyType;
-@property(retain) NSString *remoteGlobalIDString;
-@property(retain) NSString *remoteInfo;
+@property(strong) NSNumber *proxyType;
+@property(copy) NSString *remoteGlobalIDString;
+@property(strong) NSString *remoteInfo;
 @end

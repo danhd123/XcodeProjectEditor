@@ -10,19 +10,14 @@
 
 
 @implementation PBXShellScriptBuildPhase
-@synthesize inputPaths;
-@synthesize name;
-@synthesize outputPaths;
-@synthesize shellPath;
-@synthesize shellScript;
 - (NSDictionary *)attrs
 {
 	NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-								 inputPaths, @"inputPaths",
-								 name, @"name",
-								 outputPaths, @"outputPaths",
-								 shellPath, @"shellPath",
-								 shellScript, @"shellScript", nil];
+								 _inputPaths, @"inputPaths",
+								 _name, @"name",
+								 _outputPaths, @"outputPaths",
+								 _shellPath, @"shellPath",
+								 _shellScript, @"shellScript", nil];
 	[dict addEntriesFromDictionary:[super attrs]];
 	return dict;
 }
