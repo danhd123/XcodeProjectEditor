@@ -33,7 +33,7 @@
 	self = [super init];
 	if (self)
 	{
-		self.attrs = [[hash mutableCopy] autorelease];
+		self.attrs = [hash mutableCopy] ;
 		if (![self isMemberOfClass:[XcodeObject class]])
 		{
 			NSString *class_name = [self className];
@@ -88,7 +88,7 @@
 			continue;
 		[ret setValue:[anObject objectForKey:key] forKey:key];
 	}
-	return [ret autorelease];
+	return ret;
 	//Some things Ruby does better. This is not one of them. 
 	
 }

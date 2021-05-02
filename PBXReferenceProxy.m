@@ -20,8 +20,6 @@
 }
 -(void)setRemoteRef:(NSString *)newRemoteRef
 {
-	[newRemoteRef retain];
-	[remoteRef release];
 	remoteRef = newRemoteRef;
 }
 - (NSDictionary *)attrs

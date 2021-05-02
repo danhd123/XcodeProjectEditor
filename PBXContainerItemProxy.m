@@ -20,8 +20,6 @@
 }
 -(void)setContainerPortal:(NSString *)contPort
 {
-	[contPort retain];
-	[containerPortal release];
 	containerPortal = contPort;
 }
 - (NSDictionary *)attrs

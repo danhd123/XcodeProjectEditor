@@ -14,6 +14,6 @@
 	NSDictionary *buildSettings;
 	NSString *name;
 }
-@property(retain) NSDictionary *buildSettings;
-@property(retain) NSString *name;
+@property(strong) NSDictionary *buildSettings;
+@property(strong) NSString *name;
 @end

@@ -18,8 +18,6 @@
 }
 -(void)setTargetProxy:(NSString *)tp
 {
-	[tp retain];
-	[targetProxy release];
 	targetProxy = tp;
 }
 -(PBXNativeTarget *)target
@@ -28,8 +26,6 @@
 }
 -(void)setTarget:(NSString *)t
 {
-	[t retain];
-	[target release];
 	target = t;
 }
 

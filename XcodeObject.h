@@ -19,7 +19,7 @@
 +(id)fromHash:(NSDictionary *)anObject;
 -(NSDictionary *)hashRepresentation;
 @property(assign) int version;
-@property(assign) SYPBXProjArchiver *archiver;
+@property(retain) SYPBXProjArchiver *archiver;
 @property(retain) id archiveID;
 @property(nonatomic, retain) NSMutableDictionary *attrs;
 @end

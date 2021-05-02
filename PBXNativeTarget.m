@@ -34,8 +34,6 @@
 }
 - (void)setProductReference:(NSString *)newReference
 {
-	[newReference retain];
-	[productReference release];
 	newReference = productReference;
 }
 //TODO: check if I need to do the same with Build Rules and Dependencies
@@ -46,8 +44,6 @@
 }
 - (void)setBuildConfigurationList:(NSString *)newList
 {
-	[newList retain];
-	[buildConfigurationList release];
 	buildConfigurationList = newList;
 }
 -(NSDictionary *)attrs

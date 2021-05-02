@@ -21,7 +21,7 @@
 	{
 		objectsByArchiveIDs = [[NSMutableDictionary alloc] init];
 		srandom(time(0));
-		projectHash = [hash retain];
+		projectHash = hash;
 	}
 	return self;
 }

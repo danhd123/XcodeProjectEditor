@@ -41,7 +41,7 @@ static SYXCProjFileUtils *sSharedUtils;
 //	PBXProject *project = [projectArchiver unarchive];
 //	project.sourceFileName = file;
 	//Client code should call these methods; own the archiver. 
-	return [projectArchiver autorelease];
+	return projectArchiver;
 }
 +(void)dumpProjectArchiver:(SYPBXProjArchiver *)project atPath:(NSString *)path
 {

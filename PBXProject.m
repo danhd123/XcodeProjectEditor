@@ -24,8 +24,6 @@
 }
 - (void)setBuildConfigurationList:(NSString *)newList
 {
-	[newList retain];
-	[buildConfigurationList release];
 	buildConfigurationList = newList;
 }
 - (PBXGroup *)mainGroup
@@ -34,8 +32,6 @@
 }
 - (void)setMainGroup:(NSString *)newGroup
 {
-	[newGroup retain];
-	[mainGroup release];
 	mainGroup = newGroup;
 }
 - (PBXGroup *)productRefGroup
@@ -44,8 +40,6 @@
 }
 - (void)setProductRefGroup:(NSString *)newGroup
 {
-	[newGroup retain];
-	[productRefGroup release];
 	productRefGroup = newGroup;
 }
 - (NSArray *)targets

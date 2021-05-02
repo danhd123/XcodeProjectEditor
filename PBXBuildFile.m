@@ -17,8 +17,6 @@
 }
 - (void)setFileRef:(NSString *)newRef
 {
-	[newRef retain];
-	[fileRef release];
 	fileRef = newRef;
 }
 - (NSDictionary *)attrs
