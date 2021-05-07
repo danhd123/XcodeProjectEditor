@@ -10,11 +10,11 @@
 
 @class SYPBXProjArchiver, PBXProject;
 
-@interface XPEAppDelegate : NSObject {
+@interface XPEAppDelegate : NSObject <NSApplicationDelegate, NSOpenSavePanelDelegate> {
 	IBOutlet NSImageView *fileWell;
 	IBOutlet NSTextField *pathBox;
 	IBOutlet NSView *fileDropTarget;
-	IBOutlet NSButton *parseButton;
+	IBOutlet NSButton *browseButton;
 	IBOutlet NSTextView *textView;
 	SYPBXProjArchiver *archiver;
 	PBXProject *project;

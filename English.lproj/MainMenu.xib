@@ -5,7 +5,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication"/>
+        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
+            <connections>
+                <outlet property="delegate" destination="815" id="STs-Ar-bsQ"/>
+            </connections>
+        </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject">
             <connections>
@@ -654,7 +658,7 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="196" y="163" width="490" height="347"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="2688" height="1655"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1415"/>
             <value key="minSize" type="size" width="490" height="136"/>
             <view key="contentView" id="368">
                 <rect key="frame" x="0.0" y="0.0" width="490" height="347"/>
@@ -682,15 +686,15 @@
                         <rect key="frame" x="0.0" y="-1" width="491" height="247"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <clipView key="contentView" id="hle-66-G5K">
-                            <rect key="frame" x="1" y="1" width="489" height="245"/>
+                            <rect key="frame" x="1" y="1" width="474" height="245"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <textView importsGraphics="NO" verticallyResizable="YES" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" spellingCorrection="YES" smartInsertDelete="YES" id="830">
-                                    <rect key="frame" x="0.0" y="0.0" width="489" height="245"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="474" height="245"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                    <size key="minSize" width="489" height="245"/>
+                                    <size key="minSize" width="474" height="245"/>
                                     <size key="maxSize" width="491" height="10000000"/>
                                     <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                 </textView>
@@ -702,7 +706,7 @@
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                         <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="828">
-                            <rect key="frame" x="474" y="1" width="16" height="245"/>
+                            <rect key="frame" x="475" y="1" width="15" height="245"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                     </scrollView>
@@ -717,12 +721,24 @@
                             <action selector="parse:" target="815" id="831"/>
                         </connections>
                     </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KeO-P6-hFZ">
+                        <rect key="frame" x="293" y="270" width="90" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="push" title="Browse..." bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="naT-5G-p0X">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="browse:" target="815" id="WgO-kH-dre"/>
+                        </connections>
+                    </button>
                 </subviews>
             </view>
             <point key="canvasLocation" x="-119" y="-117"/>
         </window>
         <customObject id="815" customClass="XPEAppDelegate">
             <connections>
+                <outlet property="browseButton" destination="KeO-P6-hFZ" id="NYj-wp-1W0"/>
                 <outlet property="fileDropTarget" destination="818" id="819"/>
                 <outlet property="fileWell" destination="813" id="820"/>
                 <outlet property="parseButton" destination="822" id="824"/>

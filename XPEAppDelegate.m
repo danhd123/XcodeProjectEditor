@@ -23,6 +23,16 @@
 	}
 	return self;
 }
+- (IBAction)browse:(id)sender
+{
+    NSOpenPanel *openPanel = [NSOpenPanel openPanel];
+    [openPanel setCanChooseDirectories:NO];
+    [openPanel setDelegate:self];
+    [openPanel runModal];
+    NSURL *selection = [openPanel URL];
+    NSString *path = selection.path;
+    [pathBox setStringValue:path];
+}
 - (IBAction)parse:(id)sender
 {
     archiver = nil;
@@ -35,4 +45,11 @@
 		[dict addEntriesFromDictionary:[target hashRepresentation]];
 	[textView setString:[dict description]];
 }
+- (BOOL)panel:(id)sender shouldEnableURL:(NSURL *)url {
+    if ([url.pathExtension isEqualToString:@"xcodeproj"]) {
+        return true;
+    }
+    return false;
+}
+
 @end
