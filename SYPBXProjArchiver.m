@@ -26,7 +26,6 @@
 	if (self)
 	{
 		_objectsByArchiveIDs = [[NSMutableDictionary alloc] init];
-		srandom(time(0));
 		_projectHash = hash;
 	}
 	return self;
@@ -44,7 +43,7 @@
 	{
 		for (int i = 0; i < 24; i+=2)
 		{
-            [arcId appendFormat:@"%02lX", random()%256];
+            [arcId appendFormat:@"%02dX", arc4random()%256];
 		}
 		if ([self.objectsByArchiveIDs objectForKey:arcId])
 			continue;

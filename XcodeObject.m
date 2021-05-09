@@ -35,7 +35,7 @@
 		_attrs = [hash mutableCopy] ;
 		if (![self isMemberOfClass:[XcodeObject class]])
 		{
-			NSString *class_name = [self className];
+			NSString *class_name = NSStringFromClass(self.class);
 			if ([_attrs objectForKey:@"isa"] == nil)
 			{
 				[_attrs setObject:class_name forKey:@"isa"];

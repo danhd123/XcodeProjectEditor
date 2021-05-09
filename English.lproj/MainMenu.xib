@@ -741,7 +741,6 @@
                 <outlet property="browseButton" destination="KeO-P6-hFZ" id="NYj-wp-1W0"/>
                 <outlet property="fileDropTarget" destination="818" id="819"/>
                 <outlet property="fileWell" destination="813" id="820"/>
-                <outlet property="parseButton" destination="822" id="824"/>
                 <outlet property="pathBox" destination="811" id="821"/>
                 <outlet property="textView" destination="830" id="832"/>
             </connections>

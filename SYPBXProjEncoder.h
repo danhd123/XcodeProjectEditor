@@ -6,7 +6,7 @@
 //  Copyright 2010 Softyards Software. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
+#import <Foundation/Foundation.h>
 
 
 @interface SYPBXProjEncoder : NSObject

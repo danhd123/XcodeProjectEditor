@@ -8,7 +8,7 @@
 
 // Objective-C counterpart to shortcuts.rb
 
-#import <Cocoa/Cocoa.h>
+#import <Foundation/Foundation.h>
 
 @class SYPBXProjArchiver;
 
